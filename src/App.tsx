@@ -4,10 +4,7 @@ import { ChangeType } from "./components/ChangeType";
 import { RevealAnswer } from "./components/RevealAnswer";
 import { TwoDice } from "./components/TwoDice";
 import { Counter } from "./components/Counter";
-<<<<<<< Updated upstream
-=======
 import { Button, Col, Container, Row } from "react-bootstrap";
->>>>>>> Stashed changes
 
 function App(): React.JSX.Element {
     return (
@@ -34,54 +31,8 @@ function App(): React.JSX.Element {
             {/* List with at least three items */}
             <div>
                 Edit <code>src/App.tsx</code> and save. This page will
-                automatically reload. Obed Hello World Unordered List:
-                <ul>
-                    <li>Trees</li>
-                    <li>Sunlight</li>
-                    <li>Lawn</li>
-                </ul>
-            </div>
-            {/* Bootstrap Button */}
-            <Button
-                className="btn btn-primary"
-                onClick={() => {
-                    console.log("Hello World!");
-                }}
-            >
-                Log Hello World
-            </Button>
-            {/* Red background divs */}
-            <Container>
-                <Row>
-                    <Col>
-                        <div
-                            style={{
-                                width: "100%",
-                                height: "200px",
-                                backgroundColor: "red",
-                            }}
-                        ></div>
-                    </Col>
-                    <Col>
-                        <div
-                            style={{
-                                width: "100%",
-                                height: "200px",
-                                backgroundColor: "red",
-                            }}
-                        ></div>
-                    </Col>
-                </Row>
-            </Container>
-            <hr />
-            <Counter />
-            <hr />
-            <RevealAnswer />
-            <hr />
-            <TwoDice />
-            <hr />
-            <ChangeType />
->>>>>>> Stashed changes
+                automatically reload. Obed
+            </p>
         </div>
     );
 }
