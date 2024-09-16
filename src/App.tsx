@@ -1,6 +1,10 @@
 import React from "react";
 import "./App.css";
 import { Button } from "react-bootstrap";
+import { Container } from "react-bootstrap";
+import { Row } from "react-bootstrap";
+import { Col } from "react-bootstrap";
+
 function App(): React.JSX.Element {
     return (
         <div className="App">
@@ -28,6 +32,33 @@ function App(): React.JSX.Element {
                 {" "}
                 Log Hello World!
             </Button>
+            <div>
+                <Container>
+                    <Row>
+                        <Col>
+                            First column.
+                            <div
+                                style={{
+                                    width: "100%",
+                                    height: "100px",
+                                    backgroundColor: "red",
+                                }}
+                            ></div>
+                        </Col>
+                        <Col>
+                            Second column.
+                            <div
+                                style={{
+                                    width: "100%",
+                                    height: "100px",
+                                    backgroundColor: "red",
+                                }}
+                            ></div>
+                        </Col>
+                    </Row>
+                </Container>
+            </div>
+            ;
         </div>
     );
 }
