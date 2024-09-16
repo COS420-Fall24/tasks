@@ -5,7 +5,10 @@
  * the number twice.
  */
 export function bookEndList(numbers: number[]): number[] {
-    return numbers;
+    let finalArray: number[] = [];
+    if (numbers.length == 0) return finalArray;
+    else finalArray = [numbers[0], numbers[numbers.length - 1]];
+    return finalArray;
 }
 
 /**
@@ -13,7 +16,11 @@ export function bookEndList(numbers: number[]): number[] {
  * number has been tripled (multiplied by 3).
  */
 export function tripleNumbers(numbers: number[]): number[] {
-    return numbers;
+    let finalArray: number[] = [];
+    for (let count: number = 0; count < numbers.length; count++) {
+        finalArray[count] = numbers[count] * 3;
+    }
+    return finalArray;
 }
 
 /**
@@ -21,7 +28,17 @@ export function tripleNumbers(numbers: number[]): number[] {
  * the number cannot be parsed as an integer, convert it to 0 instead.
  */
 export function stringsToIntegers(numbers: string[]): number[] {
-    return [];
+    let strInt: number[] = [];
+    let tempNum: number = 0;
+    for (let count: number = 0; count < numbers.length; count++) {
+        tempNum = parseInt(numbers[count]);
+        if (isNaN(tempNum)) {
+            strInt[count] = 0;
+        } else {
+            strInt[count] = tempNum;
+        }
+    }
+    return strInt;
 }
 
 /**
