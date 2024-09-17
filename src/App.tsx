@@ -13,7 +13,7 @@ function App(): React.JSX.Element {
             </header>
             <p>
                 Edit <code>src/App.tsx</code> and save. This page will
-                automatically reload. Josh Hello World
+                automatically reload.
             </p>
             <div style={{ background: "blue" }}>
                 <h1>This is a header.</h1>
