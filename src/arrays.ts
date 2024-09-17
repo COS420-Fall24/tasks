@@ -113,6 +113,20 @@ export function countShortWords(words: string[]): number {
  * then return true.
  */
 export function allRGB(colors: string[]): boolean {
+    let filteredColors: string[] = [];
+    filteredColors = colors.map((color) => color.toUpperCase());
+    filteredColors = filteredColors.filter(
+        (color: string): boolean => color !== "RED",
+    );
+    filteredColors = filteredColors.filter(
+        (color: string): boolean => color !== "BLUE",
+    );
+    filteredColors = filteredColors.filter(
+        (color: string): boolean => color !== "GREEN",
+    );
+    if (filteredColors.length == 0) {
+        return true;
+    }
     return false;
 }
 
