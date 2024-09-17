@@ -99,7 +99,12 @@ export const shoutIfExclaiming = (messages: string[]): string[] => {
  * 4 letters long.
  */
 export function countShortWords(words: string[]): number {
-    return 0;
+    let shorterWords: number[] = [];
+    for (let count: number = 0; count < words.length; count++) {
+        shorterWords.push(words[count].length);
+    }
+    shorterWords = shorterWords.filter((length: number): boolean => length < 4);
+    return shorterWords.length;
 }
 
 /**
