@@ -15,42 +15,8 @@ function App(): React.JSX.Element {
             />
             <div>
                 Edit <code>src/App.tsx</code> and save. This page will
-                automatically reload. Obed Hello World Unordered List:
-                <ul>
-                    <li>Trees</li>
-                    <li>Sunlight</li>
-                    <li>Lawn</li>
-                </ul>
-                <Button
-                    onClick={() => {
-                        console.log("Hello World!");
-                    }}
-                >
-                    Log Hello World
-                </Button>
-                <Container>
-                    <Row>
-                        <Col>
-                            <div
-                                style={{
-                                    width: "100%",
-                                    height: "200px",
-                                    backgroundColor: "red",
-                                }}
-                            ></div>
-                        </Col>
-                        <Col>
-                            <div
-                                style={{
-                                    width: "100%",
-                                    height: "200px",
-                                    backgroundColor: "red",
-                                }}
-                            ></div>
-                        </Col>
-                    </Row>
-                </Container>
-            </div>
+                automatically reload. Obed
+            </p>
         </div>
     );
 }
