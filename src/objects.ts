@@ -5,12 +5,22 @@ import { Question, QuestionType } from "./interfaces/question";
  * `expected` should be empty strings, the `options` should be an empty list, the `points`
  * should default to 1, and `published` should default to false.
  */
+
 export function makeBlankQuestion(
     id: number,
     name: string,
-    type: QuestionType
+    type: QuestionType,
 ): Question {
-    return {};
+    return {
+        id,
+        name,
+        type,
+        body: "",
+        expected: "",
+        options: [],
+        points: 1,
+        published: false,
+    };
 }
 
 /**
@@ -21,7 +31,8 @@ export function makeBlankQuestion(
  * HINT: Look up the `trim` and `toLowerCase` functions.
  */
 export function isCorrect(question: Question, answer: string): boolean {
-    return false;
+    if (question.expected == answer) return true;
+    else return false;
 }
 
 /**
@@ -31,7 +42,14 @@ export function isCorrect(question: Question, answer: string): boolean {
  * be exactly one of the options.
  */
 export function isValid(question: Question, answer: string): boolean {
-    return false;
+    switch (question.type) {
+        case "short_answer_question":
+            return true;
+        case "multiple_choice_question":
+            return question.options.includes(answer);
+        default:
+            return false;
+    }
 }
 
 /**
@@ -41,7 +59,11 @@ export function isValid(question: Question, answer: string): boolean {
  * name "My First Question" would become "9: My First Q".
  */
 export function toShortForm(question: Question): string {
-    return "";
+    const id = question.id;
+    const name = question.name.substring(0, 10);
+    const str = id.toString() + ": " + name.toString();
+
+    return str;
 }
 
 /**
@@ -62,7 +84,16 @@ export function toShortForm(question: Question): string {
  * Check the unit tests for more examples of what this looks like!
  */
 export function toMarkdown(question: Question): string {
-    return "";
+    const name = question.name;
+    let str = "# " + name.toString() + "\n" + question.body.toString() + "\n";
+
+    if (question.type == "multiple_choice_question") {
+        question.options.forEach((option) => {
+            str += "- " + option + "\n";
+        });
+    }
+
+    return str.trim();
 }
 
 /**
@@ -70,6 +101,7 @@ export function toMarkdown(question: Question): string {
  * `newName`.
  */
 export function renameQuestion(question: Question, newName: string): Question {
+    question.name = newName;
     return question;
 }
 
@@ -79,7 +111,11 @@ export function renameQuestion(question: Question, newName: string): Question {
  * published; if it was published, now it should be not published.
  */
 export function publishQuestion(question: Question): Question {
-    return question;
+    let newQuestion = { ...question };
+    newQuestion.published = !question.published;
+    console.log("Original Question:", question);
+    console.log("Duplicated Question:", newQuestion);
+    return newQuestion;
 }
 
 /**
@@ -89,7 +125,20 @@ export function publishQuestion(question: Question): Question {
  * The `published` field should be reset to false.
  */
 export function duplicateQuestion(id: number, oldQuestion: Question): Question {
-    return oldQuestion;
+    let newQuestion = {
+        id,
+        name: "Copy of " + oldQuestion.name,
+        type: oldQuestion.type,
+        body: oldQuestion.body,
+        options: [...oldQuestion.options],
+        expected: oldQuestion.expected,
+        points: oldQuestion.points,
+        published: false,
+    };
+    console.log("Original Question:", oldQuestion);
+    console.log("Duplicated Question:", newQuestion);
+
+    return newQuestion;
 }
 
 /**
@@ -115,7 +164,7 @@ export function mergeQuestion(
     id: number,
     name: string,
     contentQuestion: Question,
-    { points }: { points: number }
+    { points }: { points: number },
 ): Question {
     return contentQuestion;
 }
