@@ -31,7 +31,10 @@ export function makeBlankQuestion(
  * HINT: Look up the `trim` and `toLowerCase` functions.
  */
 export function isCorrect(question: Question, answer: string): boolean {
-    if (question.expected == answer) return true;
+    const expected = question.expected.trim().toLowerCase();
+    const newAnswer = answer.trim().toLowerCase();
+
+    if (expected === newAnswer) return true;
     else return false;
 }
 
@@ -47,8 +50,6 @@ export function isValid(question: Question, answer: string): boolean {
             return true;
         case "multiple_choice_question":
             return question.options.includes(answer);
-        default:
-            return false;
     }
 }
 
@@ -87,7 +88,7 @@ export function toMarkdown(question: Question): string {
     const name = question.name;
     let str = "# " + name.toString() + "\n" + question.body.toString() + "\n";
 
-    if (question.type == "multiple_choice_question") {
+    if (question.type === "multiple_choice_question") {
         question.options.forEach((option) => {
             str += "- " + option + "\n";
         });
@@ -101,8 +102,9 @@ export function toMarkdown(question: Question): string {
  * `newName`.
  */
 export function renameQuestion(question: Question, newName: string): Question {
-    question.name = newName;
-    return question;
+    let newQuestion = { ...question };
+    newQuestion.name = newName;
+    return newQuestion;
 }
 
 /**
@@ -149,7 +151,11 @@ export function duplicateQuestion(id: number, oldQuestion: Question): Question {
  * Check out the subsection about "Nested Fields" for more information.
  */
 export function addOption(question: Question, newOption: string): Question {
-    return question;
+    let newQuestion = {
+        ...question,
+        options: [...question.options, newOption],
+    };
+    return newQuestion;
 }
 
 /**
@@ -166,5 +172,12 @@ export function mergeQuestion(
     contentQuestion: Question,
     { points }: { points: number },
 ): Question {
-    return contentQuestion;
+    let newQuestion = {
+        ...contentQuestion,
+        id: id,
+        name: name,
+        points,
+        published: false,
+    };
+    return newQuestion;
 }
