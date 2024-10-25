@@ -7,28 +7,12 @@ import { Question, QuestionType } from "./interfaces/question";
  * @returns A new array containing only published questions.
  */
 export function getPublishedQuestions(questions: Question[]): Question[] {
-    return [];
+    return questions.filter((question) => question.published);
 }
 
-/**
- * Consumes an array of questions and returns a new array of only the questions that are
- * considered "non-empty". An empty question has an empty string for its `body` and
- * `expected`, and an empty array for its `options`.
- */
-export function getNonEmptyQuestions(questions: Question[]): Question[] {
-    return questions.filter(
-        (question) =>
-            question.body !== "" ||
-            question.expected !== "" ||
-            question.options.length > 0,
-    );
-}
-
-/**
- * Finds a question by its ID in the array.
- * @param questions - An array of Question objects.
- * @param id - The ID of the question to find.
- * @returns The found Question object or null if not found.
+/***
+ * Consumes an array of questions and returns the question with the given `id`. If the
+ * question is not found, return `null` instead.
  */
 export function findQuestion(
     questions: Question[],
@@ -44,16 +28,16 @@ export function findQuestion(
  * @returns A new array of questions without the specified question.
  */
 export function removeQuestion(questions: Question[], id: number): Question[] {
-    return [];
+    return questions.filter((question) => question.id !== id);
 }
 
-/**
- * Extracts the names of all questions into a new array.
- * @param questions - An array of Question objects.
- * @returns An array of question names.
+/***
+ * Consumes an array of questions and returns a new array containing just the names of the
+ * questions, as an array.
+ * Do not modify the input array.
  */
 export function getNames(questions: Question[]): string[] {
-    return [];
+    return questions.map((question) => question.name);
 }
 
 /**
@@ -63,16 +47,21 @@ export function getNames(questions: Question[]): string[] {
  * @returns An array of Answer objects.
  */
 export function makeAnswers(questions: Question[]): Answer[] {
-    return [];
+    return questions.map((question) => ({
+        questionId: question.id,
+        text: "",
+        submitted: false,
+        correct: false,
+    }));
 }
 
-/**
- * Publishes all questions in the array.
- * @param questions - An array of Question objects.
- * @returns A new array of questions with all marked as published.
+/***
+ * Consumes an array of Questions and produces a new array of questions, where
+ * each question is now published, regardless of its previous published status.
+ * Hint: as usual, do not modify the input questions array
  */
 export function publishAll(questions: Question[]): Question[] {
-    return [];
+    return questions.map((question) => ({ ...question, published: true }));
 }
 
 /**
@@ -91,7 +80,21 @@ export function addNewQuestion(
 <<<<<<< HEAD
 =======
 ): Question[] {
-    return [];
+    const makeBlankQuestion = (
+        id: number,
+        name: string,
+        type: QuestionType,
+    ): Question => ({
+        id,
+        name,
+        type,
+        body: "",
+        expected: "",
+        options: [],
+        points: 1,
+        published: false,
+    });
+    return [...questions, makeBlankQuestion(id, name, type)];
 }
 
 /***
@@ -107,34 +110,12 @@ export function renameQuestionById(
     newName: string,
 >>>>>>> 8b3325c (did some)
 ): Question[] {
-    return [];
+    return questions.map((question) =>
+        question.id === targetId ? { ...question, name: newName } : question,
+    );
 }
 
 /**
-<<<<<<< HEAD
- * Renames a specific question identified by its ID.
- * @param questions - An array of Question objects.
- * @param targetId - The ID of the question to rename.
- * @param newName - The new name for the question.
- * @returns A new array of questions with the specified question renamed.
- */
-export function renameQuestionById(
-    questions: Question[],
-    targetId: number,
-    newName: string,
-): Question[] {
-    return [];
-}
-
-/**
- * Edits the options for a specific question identified by its ID.
- * If the targetOptionIndex is -1, adds a new option; otherwise replaces an existing option.
- * @param questions - An array of Question objects.
- * @param targetId - The ID of the question to edit.
- * @param targetOptionIndex - The index of the option to replace or -1 to add a new option.
- * @param newOption - The new option to add or replace.
- * @returns A new array of questions with the updated options.
-=======
  * Consumes an array of Questions and produces a new array of Questions, where all
  * the Questions are the same EXCEPT for the one with the given `targetId`. That
  * Question should be the same EXCEPT that its `option` array should have a new element.
@@ -153,29 +134,16 @@ export function editOption(
     targetOptionIndex: number,
     newOption: string,
 ): Question[] {
-<<<<<<< HEAD
     return questions.map((question) => {
-        if (question.id !== targetId) {
-            return question;
+        if (question.id === targetId) {
+            const newOptions = [...question.options];
+            if (targetOptionIndex === -1) {
+                newOptions.push(newOption);
+            } else {
+                newOptions[targetOptionIndex] = newOption;
+            }
+            return { ...question, options: newOptions };
         }
-
-        // Clone the options array
-        const updatedOptions = [...question.options];
-
-        // Check if we are appending or replacing an option
-        if (targetOptionIndex === -1) {
-            updatedOptions.push(newOption);
-        } else if (
-            targetOptionIndex >= 0 &&
-            targetOptionIndex < updatedOptions.length
-        ) {
-            updatedOptions[targetOptionIndex] = newOption;
-        }
-
-        // Return the updated question
-        return { ...question, options: updatedOptions };
+        return question;
     });
-=======
-    return [];
->>>>>>> 8b3325c (did some)
 }
