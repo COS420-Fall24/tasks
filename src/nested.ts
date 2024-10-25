@@ -16,7 +16,12 @@ export function getPublishedQuestions(questions: Question[]): Question[] {
  * `expected`, and an empty array for its `options`.
  */
 export function getNonEmptyQuestions(questions: Question[]): Question[] {
-    return [];
+    return questions.filter(
+        (question) =>
+            question.body !== "" ||
+            question.expected !== "" ||
+            question.options.length > 0,
+    );
 }
 
 /**
@@ -29,7 +34,7 @@ export function findQuestion(
     questions: Question[],
     id: number,
 ): Question | null {
-    return null;
+    return questions.find((question) => question.id === id) || null;
 }
 
 /**
@@ -83,11 +88,30 @@ export function addNewQuestion(
     id: number,
     name: string,
     type: QuestionType,
+<<<<<<< HEAD
+=======
+): Question[] {
+    return [];
+}
+
+/***
+ * Consumes an array of Questions and produces a new array of Questions, where all
+ * the Questions are the same EXCEPT for the one with the given `targetId`. That
+ * Question should be the same EXCEPT that its name should now be `newName`.
+ * Hint: as usual, do not modify the input questions array,
+ *       to make a new copy of a question with some changes, use the ... operator
+ */
+export function renameQuestionById(
+    questions: Question[],
+    targetId: number,
+    newName: string,
+>>>>>>> 8b3325c (did some)
 ): Question[] {
     return [];
 }
 
 /**
+<<<<<<< HEAD
  * Renames a specific question identified by its ID.
  * @param questions - An array of Question objects.
  * @param targetId - The ID of the question to rename.
@@ -110,6 +134,18 @@ export function renameQuestionById(
  * @param targetOptionIndex - The index of the option to replace or -1 to add a new option.
  * @param newOption - The new option to add or replace.
  * @returns A new array of questions with the updated options.
+=======
+ * Consumes an array of Questions and produces a new array of Questions, where all
+ * the Questions are the same EXCEPT for the one with the given `targetId`. That
+ * Question should be the same EXCEPT that its `option` array should have a new element.
+ * If the `targetOptionIndex` is -1, the `newOption` should be added to the end of the list.
+ * Otherwise, it should *replace* the existing element at the `targetOptionIndex`.
+ *
+ * Remember, if a function starts getting too complicated, think about how a helper function
+ * can make it simpler! Break down complicated tasks into little pieces.
+ *
+ * Hint: you need to use the ... operator for both the question and the options array
+>>>>>>> 8b3325c (did some)
  */
 export function editOption(
     questions: Question[],
@@ -117,6 +153,7 @@ export function editOption(
     targetOptionIndex: number,
     newOption: string,
 ): Question[] {
+<<<<<<< HEAD
     return questions.map((question) => {
         if (question.id !== targetId) {
             return question;
@@ -138,4 +175,7 @@ export function editOption(
         // Return the updated question
         return { ...question, options: updatedOptions };
     });
+=======
+    return [];
+>>>>>>> 8b3325c (did some)
 }
