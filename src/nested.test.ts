@@ -1,7 +1,6 @@
 import { Question } from "./interfaces/question";
 import {
     getPublishedQuestions,
-    getNonEmptyQuestions,
     findQuestion,
     removeQuestion,
     getNames,
@@ -11,6 +10,7 @@ import {
     renameQuestionById,
     editOption,
 } from "./nested";
+import { getNonEmptyQuestions } from "./arrays";
 import testQuestionData from "./data/questions.json";
 import backupQuestionData from "./data/questions.json";
 
