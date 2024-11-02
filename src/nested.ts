@@ -77,8 +77,6 @@ export function addNewQuestion(
     id: number,
     name: string,
     type: QuestionType,
-<<<<<<< HEAD
-=======
 ): Question[] {
     const makeBlankQuestion = (
         id: number,
@@ -108,7 +106,6 @@ export function renameQuestionById(
     questions: Question[],
     targetId: number,
     newName: string,
->>>>>>> 8b3325c (did some)
 ): Question[] {
     return questions.map((question) =>
         question.id === targetId ? { ...question, name: newName } : question,
@@ -122,11 +119,7 @@ export function renameQuestionById(
  * If the `targetOptionIndex` is -1, the `newOption` should be added to the end of the list.
  * Otherwise, it should *replace* the existing element at the `targetOptionIndex`.
  *
- * Remember, if a function starts getting too complicated, think about how a helper function
- * can make it simpler! Break down complicated tasks into little pieces.
- *
  * Hint: you need to use the ... operator for both the question and the options array
->>>>>>> 8b3325c (did some)
  */
 export function editOption(
     questions: Question[],
@@ -136,12 +129,12 @@ export function editOption(
 ): Question[] {
     return questions.map((question) => {
         if (question.id === targetId) {
-            const newOptions = [...question.options];
-            if (targetOptionIndex === -1) {
-                newOptions.push(newOption);
-            } else {
-                newOptions[targetOptionIndex] = newOption;
-            }
+            const newOptions =
+                targetOptionIndex === -1 ?
+                    [...question.options, newOption]
+                :   question.options.map((option, index) =>
+                        index === targetOptionIndex ? newOption : option,
+                    );
             return { ...question, options: newOptions };
         }
         return question;

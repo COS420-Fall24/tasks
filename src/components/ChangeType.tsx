@@ -2,26 +2,20 @@ import React, { useState } from "react";
 import { Button } from "react-bootstrap";
 
 export function ChangeType(): React.JSX.Element {
-    const [type, setType] = useState<"Short Answer" | "Multiple Choice">(
-        "Short Answer",
-    );
+    // State to track the type, initially set to "Short Answer"
+    const [type, setType] = useState<string>("Short Answer");
+
+    // Function to toggle the type between "Short Answer" and "Multiple Choice"
+    const toggleType = () => {
+        setType((prevType) =>
+            prevType === "Short Answer" ? "Multiple Choice" : "Short Answer",
+        );
+    };
 
     return (
         <div>
-            <div>{type}</div>
-            <Button
-                onClick={() => {
-                    setType(
-                        type === "Short Answer" ? "Multiple Choice" : (
-                            "Short Answer"
-                        ),
-                    );
-                }}
-                role="button"
-                aria-label="Change Type"
-            >
-                Change Type
-            </Button>
+            <p>{type}</p>
+            <Button onClick={toggleType}>Change Type</Button>
         </div>
     );
 }

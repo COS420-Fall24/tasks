@@ -1,38 +1,35 @@
 import React, { useState } from "react";
 import { Button } from "react-bootstrap";
 
-// Helper function to roll a six-sided die
+// Function to simulate a dice roll, generating a number between 1 and 6
 export function d6(): number {
     return 1 + Math.floor(Math.random() * 6);
 }
 
-export function TwoDice({
-    initialLeftDie = d6(),
-    initialRightDie = d6(),
-}: {
-    initialLeftDie?: number;
-    initialRightDie?: number;
-}): React.JSX.Element {
-    // Initialize state for each die
-    const [leftDie, setLeftDie] = useState<number>(initialLeftDie);
-    const [rightDie, setRightDie] = useState<number>(initialRightDie);
-
-    // Determine win/lose conditions
-    const hasWon = leftDie === rightDie && leftDie !== 1;
-    const hasLost = leftDie === 1 && rightDie === 1;
+export function TwoDice(): React.JSX.Element {
+    const [leftDie, setLeftDie] = useState<number>(d6());
+    const [rightDie, setRightDie] = useState<number>(d6());
 
     return (
         <div>
-            <Button onClick={() => setLeftDie(d6())} data-testid="roll-left">
+            <div data-testid="left-die">Left Die: {leftDie}</div>
+            <div data-testid="right-die">Right Die: {rightDie}</div>
+            <Button
+                onClick={() => {
+                    setLeftDie(d6());
+                }}
+            >
                 Roll Left
             </Button>
-            <Button onClick={() => setRightDie(d6())} data-testid="roll-right">
+            <Button
+                onClick={() => {
+                    setRightDie(d6());
+                }}
+            >
                 Roll Right
             </Button>
-            <span data-testid="left-die">{leftDie}</span>
-            <span data-testid="right-die">{rightDie}</span>
-            {hasWon && <p>Win</p>}
-            {hasLost && <p>Lose</p>}
+            {leftDie === rightDie && leftDie !== 1 && <div>Win</div>}
+            {leftDie === 1 && rightDie === 1 && <div>Lose</div>}
         </div>
     );
 }
