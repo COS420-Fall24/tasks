@@ -2,8 +2,9 @@ import { Answer } from "./interfaces/answer";
 import { Question, QuestionType } from "./interfaces/question";
 
 /**
- * Consumes an array of questions and returns a new array with only the questions
- * that are `published`.
+ * Filters an array of questions to return only those that are published.
+ * @param questions - An array of Question objects.
+ * @returns A new array containing only published questions.
  */
 export function getPublishedQuestions(questions: Question[]): Question[] {
     return [];
@@ -18,9 +19,11 @@ export function getNonEmptyQuestions(questions: Question[]): Question[] {
     return [];
 }
 
-/***
- * Consumes an array of questions and returns the question with the given `id`. If the
- * question is not found, return `null` instead.
+/**
+ * Finds a question by its ID in the array.
+ * @param questions - An array of Question objects.
+ * @param id - The ID of the question to find.
+ * @returns The found Question object or null if not found.
  */
 export function findQuestion(
     questions: Question[],
@@ -30,46 +33,50 @@ export function findQuestion(
 }
 
 /**
- * Consumes an array of questions and returns a new array that does not contain the question
- * with the given `id`.
- * Hint: use filter
+ * Removes a question from the array based on its ID.
+ * @param questions - An array of Question objects.
+ * @param id - The ID of the question to remove.
+ * @returns A new array of questions without the specified question.
  */
 export function removeQuestion(questions: Question[], id: number): Question[] {
     return [];
 }
 
-/***
- * Consumes an array of questions and returns a new array containing just the names of the
- * questions, as an array.
- * Do not modify the input array.
+/**
+ * Extracts the names of all questions into a new array.
+ * @param questions - An array of Question objects.
+ * @returns An array of question names.
  */
 export function getNames(questions: Question[]): string[] {
     return [];
 }
 
 /**
- * Consumes an array of Questions and produces a corresponding array of
- * Answers. Each Question gets its own Answer, copying over the `id` as the `questionId`,
- * making the `text` an empty string, and using false for both `submitted` and `correct`.
+ * Creates an array of Answers corresponding to the provided questions.
+ * Each Answer is initialized with empty values.
+ * @param questions - An array of Question objects.
+ * @returns An array of Answer objects.
  */
 export function makeAnswers(questions: Question[]): Answer[] {
     return [];
 }
 
-/***
- * Consumes an array of Questions and produces a new array of questions, where
- * each question is now published, regardless of its previous published status.
- * Hint: as usual, do not modify the input questions array
+/**
+ * Publishes all questions in the array.
+ * @param questions - An array of Question objects.
+ * @returns A new array of questions with all marked as published.
  */
 export function publishAll(questions: Question[]): Question[] {
     return [];
 }
 
-/***
- * Consumes an array of Questions and produces a new array of the same Questions,
- * except that a blank question has been added onto the end. Reuse the `makeBlankQuestion`
- * you defined in the `objects.ts` file.
- * Hint: as usual, do not modify the input questions array
+/**
+ * Adds a new blank question to the end of the array.
+ * @param questions - An array of Question objects.
+ * @param id - The ID for the new question.
+ * @param name - The name for the new question.
+ * @param type - The type of the new question.
+ * @returns A new array of questions including the new blank question.
  */
 export function addNewQuestion(
     questions: Question[],
@@ -80,12 +87,12 @@ export function addNewQuestion(
     return [];
 }
 
-/***
- * Consumes an array of Questions and produces a new array of Questions, where all
- * the Questions are the same EXCEPT for the one with the given `targetId`. That
- * Question should be the same EXCEPT that its name should now be `newName`.
- * Hint: as usual, do not modify the input questions array,
- *       to make a new copy of a question with some changes, use the ... operator
+/**
+ * Renames a specific question identified by its ID.
+ * @param questions - An array of Question objects.
+ * @param targetId - The ID of the question to rename.
+ * @param newName - The new name for the question.
+ * @returns A new array of questions with the specified question renamed.
  */
 export function renameQuestionById(
     questions: Question[],
@@ -96,16 +103,13 @@ export function renameQuestionById(
 }
 
 /**
- * Consumes an array of Questions and produces a new array of Questions, where all
- * the Questions are the same EXCEPT for the one with the given `targetId`. That
- * Question should be the same EXCEPT that its `option` array should have a new element.
- * If the `targetOptionIndex` is -1, the `newOption` should be added to the end of the list.
- * Otherwise, it should *replace* the existing element at the `targetOptionIndex`.
- *
- * Remember, if a function starts getting too complicated, think about how a helper function
- * can make it simpler! Break down complicated tasks into little pieces.
- *
- * Hint: you need to use the ... operator for both the question and the options array
+ * Edits the options for a specific question identified by its ID.
+ * If the targetOptionIndex is -1, adds a new option; otherwise replaces an existing option.
+ * @param questions - An array of Question objects.
+ * @param targetId - The ID of the question to edit.
+ * @param targetOptionIndex - The index of the option to replace or -1 to add a new option.
+ * @param newOption - The new option to add or replace.
+ * @returns A new array of questions with the updated options.
  */
 export function editOption(
     questions: Question[],
@@ -113,5 +117,25 @@ export function editOption(
     targetOptionIndex: number,
     newOption: string,
 ): Question[] {
-    return [];
+    return questions.map((question) => {
+        if (question.id !== targetId) {
+            return question;
+        }
+
+        // Clone the options array
+        const updatedOptions = [...question.options];
+
+        // Check if we are appending or replacing an option
+        if (targetOptionIndex === -1) {
+            updatedOptions.push(newOption);
+        } else if (
+            targetOptionIndex >= 0 &&
+            targetOptionIndex < updatedOptions.length
+        ) {
+            updatedOptions[targetOptionIndex] = newOption;
+        }
+
+        // Return the updated question
+        return { ...question, options: updatedOptions };
+    });
 }
