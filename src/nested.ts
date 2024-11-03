@@ -10,9 +10,9 @@ export function getPublishedQuestions(questions: Question[]): Question[] {
     return questions.filter((question) => question.published);
 }
 
-/***
- * Consumes an array of questions and returns the question with the given `id`. If the
- * question is not found, return `null` instead.
+/**
+ * Consumes an array of questions and returns the question with the given `id`.
+ * If the question is not found, return `null` instead.
  */
 export function findQuestion(
     questions: Question[],
@@ -31,10 +31,9 @@ export function removeQuestion(questions: Question[], id: number): Question[] {
     return questions.filter((question) => question.id !== id);
 }
 
-/***
+/**
  * Consumes an array of questions and returns a new array containing just the names of the
- * questions, as an array.
- * Do not modify the input array.
+ * questions, as an array. Do not modify the input array.
  */
 export function getNames(questions: Question[]): string[] {
     return questions.map((question) => question.name);
@@ -55,10 +54,10 @@ export function makeAnswers(questions: Question[]): Answer[] {
     }));
 }
 
-/***
+/**
  * Consumes an array of Questions and produces a new array of questions, where
  * each question is now published, regardless of its previous published status.
- * Hint: as usual, do not modify the input questions array
+ * Hint: as usual, do not modify the input questions array.
  */
 export function publishAll(questions: Question[]): Question[] {
     return questions.map((question) => ({ ...question, published: true }));
@@ -71,6 +70,10 @@ export function publishAll(questions: Question[]): Question[] {
  * @param name - The name for the new question.
  * @param type - The type of the new question.
  * @returns A new array of questions including the new blank question.
+/**
+ * Consumes an array of Questions and produces a new array of the same Questions,
+ * except that a blank question has been added onto the end. Reuse the `makeBlankQuestion`
+ * function to create a new blank question.
  */
 export function addNewQuestion(
     questions: Question[],
@@ -95,12 +98,10 @@ export function addNewQuestion(
     return [...questions, makeBlankQuestion(id, name, type)];
 }
 
-/***
+/**
  * Consumes an array of Questions and produces a new array of Questions, where all
- * the Questions are the same EXCEPT for the one with the given `targetId`. That
- * Question should be the same EXCEPT that its name should now be `newName`.
- * Hint: as usual, do not modify the input questions array,
- *       to make a new copy of a question with some changes, use the ... operator
+ * the Questions are the same EXCEPT for the one with the given `targetId`.
+ * That Question should be the same EXCEPT that its name should now be `newName`.
  */
 export function renameQuestionById(
     questions: Question[],
@@ -114,8 +115,8 @@ export function renameQuestionById(
 
 /**
  * Consumes an array of Questions and produces a new array of Questions, where all
- * the Questions are the same EXCEPT for the one with the given `targetId`. That
- * Question should be the same EXCEPT that its `option` array should have a new element.
+ * the Questions are the same EXCEPT for the one with the given `targetId`.
+ * That Question should be the same EXCEPT that its `options` array should have a new element.
  * If the `targetOptionIndex` is -1, the `newOption` should be added to the end of the list.
  * Otherwise, it should *replace* the existing element at the `targetOptionIndex`.
  *

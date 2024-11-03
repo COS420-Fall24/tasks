@@ -1,12 +1,10 @@
 import React, { useState } from "react";
 import { Button } from "react-bootstrap";
 
-export function ChangeType(): React.JSX.Element {
-    // State to track the type, initially set to "Short Answer"
-    const [type, setType] = useState<string>("Short Answer");
+export const ChangeType = () => {
+    const [type, setType] = useState("Short Answer");
 
-    // Function to toggle the type between "Short Answer" and "Multiple Choice"
-    const toggleType = () => {
+    const changeType = () => {
         setType((prevType) =>
             prevType === "Short Answer" ? "Multiple Choice" : "Short Answer",
         );
@@ -15,7 +13,9 @@ export function ChangeType(): React.JSX.Element {
     return (
         <div>
             <p>{type}</p>
-            <Button onClick={toggleType}>Change Type</Button>
+            <Button onClick={changeType} aria-label="Change Type">
+                Change Type
+            </Button>
         </div>
     );
-}
+};
