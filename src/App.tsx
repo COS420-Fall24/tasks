@@ -12,6 +12,7 @@ import { Button } from "react-bootstrap";
 function App(): React.JSX.Element {
     return (
         <div className="App">
+            <h1>Hello World</h1>
             <header className="App-header">
                 UM COS420 with React Hooks and TypeScript
             </header>

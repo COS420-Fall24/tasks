@@ -8,6 +8,7 @@ import { Question, QuestionType } from "./interfaces/question";
  */
 export function getPublishedQuestions(questions: Question[]): Question[] {
     return questions.filter((question) => question.published);
+    return questions.filter((question) => question.published);
 }
 
 /**
@@ -19,6 +20,7 @@ export function findQuestion(
     id: number,
 ): Question | null {
     return questions.find((question) => question.id === id) || null;
+    return questions.find((question) => question.id === id) || null;
 }
 
 /**
@@ -29,6 +31,7 @@ export function findQuestion(
  */
 export function removeQuestion(questions: Question[], id: number): Question[] {
     return questions.filter((question) => question.id !== id);
+    return questions.filter((question) => question.id !== id);
 }
 
 /**
@@ -36,6 +39,7 @@ export function removeQuestion(questions: Question[], id: number): Question[] {
  * questions, as an array. Do not modify the input array.
  */
 export function getNames(questions: Question[]): string[] {
+    return questions.map((question) => question.name);
     return questions.map((question) => question.name);
 }
 
@@ -46,6 +50,12 @@ export function getNames(questions: Question[]): string[] {
  * @returns An array of Answer objects.
  */
 export function makeAnswers(questions: Question[]): Answer[] {
+    return questions.map((question) => ({
+        questionId: question.id,
+        text: "",
+        submitted: false,
+        correct: false,
+    }));
     return questions.map((question) => ({
         questionId: question.id,
         text: "",
