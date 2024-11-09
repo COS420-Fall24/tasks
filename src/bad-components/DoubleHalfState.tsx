@@ -1,3 +1,10 @@
 import { useState } from "react";
 
-export const [dhValue, setDhValue] = useState<number>(10);
+// Custom hook for managing the DoubleHalf value
+export function useDoubleHalfState(): [
+    number,
+    // eslint-disable-next-line no-undef
+    React.Dispatch<React.SetStateAction<number>>,
+] {
+    return useState<number>(10);
+}
