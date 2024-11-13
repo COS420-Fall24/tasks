@@ -7,10 +7,6 @@ import { TwoDice } from "./components/TwoDice";
 import { DoubleHalf } from "./bad-components/DoubleHalf";
 import { ColoredBox } from "./bad-components/ColoredBox";
 import { ChooseTeam } from "./bad-components/ChooseTeam";
-import { Button } from "react-bootstrap";
-import { Container } from "react-bootstrap";
-import { Row } from "react-bootstrap";
-import { Col } from "react-bootstrap";
 
 function App(): React.JSX.Element {
     return (
@@ -19,6 +15,15 @@ function App(): React.JSX.Element {
                 <style>{"body { background-color: red; }"}</style>
                 UM COS420 with React Hooks and TypeScript Josh
             </header>
+            <hr></hr>
+            <CheckAnswer expectedAnswer="42"></CheckAnswer>
+            <hr></hr>
+            <EditMode></EditMode>
+            <hr></hr>
+            <MultipleChoiceQuestion
+                options={["a", "b", "c"]}
+                expectedAnswer="b"
+            ></MultipleChoiceQuestion>
             <hr></hr>
             <DoubleHalf></DoubleHalf>
             <hr></hr>
