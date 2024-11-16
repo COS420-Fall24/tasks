@@ -1,0 +1,971 @@
+[33mcommit 9228346cab5ff113b44038b4a58049d1c7a6d40a[m[33m ([m[1;36mHEAD -> [m[1;32msolved-nested[m[33m, [m[1;31morigin/solved-nested[m[33m, [m[1;32msolved-state[m[33m)[m
+Merge: 4d5a514 ff703b5
+Author: Obed Appiah <98442128+obedappiah@users.noreply.github.com>
+Date:   Fri Nov 1 22:41:48 2024 -0400
+
+    Merge remote-tracking branch 'upstream/task-state' into solved-nested
+
+[33mcommit 4d5a514a8517e0b5c529e26a686aeec9b1eb616a[m
+Author: Obed Appiah <98442128+obedappiah@users.noreply.github.com>
+Date:   Fri Nov 1 22:38:07 2024 -0400
+
+    m
+
+[33mcommit ff703b59a641006107c22cda42e92d29430f7906[m[33m ([m[1;31mupstream/task-state[m[33m)[m
+Author: Greg Nelson <gln@georgetown.edu>
+Date:   Thu Oct 31 00:08:48 2024 -0400
+
+    Update TwoDice.test.tsx
+
+[33mcommit 0c840d71412b6999cf14092b3ac08e22ec3d39f1[m
+Author: Greg Nelson <gregory.nelson@maine.edu>
+Date:   Sun Oct 27 18:57:43 2024 -0400
+
+    fix a potential bug with toBeCalled, investigate more next year
+
+[33mcommit a179ca96022fda73c31b96162f65bd3a0477ee22[m
+Author: Greg Nelson <gregory.nelson@maine.edu>
+Date:   Sat Oct 26 16:43:55 2024 -0400
+
+    Remove removed problems from App.tsx
+
+[33mcommit f4e8bec5ce1e08578344c955b3190ca502964e94[m
+Author: Greg Nelson <gregory.nelson@maine.edu>
+Date:   Sat Oct 26 16:38:33 2024 -0400
+
+    Add missing function that was in a removed problem
+
+[33mcommit f9ec33b7b60743116afdd14e65a3f04d2c160c83[m
+Merge: f2cd1ef ae19e0f
+Author: Greg Nelson <gregory.nelson@maine.edu>
+Date:   Sat Oct 26 16:38:20 2024 -0400
+
+    Merge branch 'task-nested' into task-state
+
+[33mcommit f2cd1efce98b1aa8664fc36ddb583adaa81e5421[m
+Author: Greg Nelson <gregory.nelson@maine.edu>
+Date:   Sat Oct 26 16:13:06 2024 -0400
+
+    remove cycleholiday and startattempt
+
+[33mcommit 413c237b19253a809b699e374c439982fd6d165f[m
+Author: Obed Appiah <98442128+obedappiah@users.noreply.github.com>
+Date:   Fri Oct 25 18:22:52 2024 -0400
+
+    final
+
+[33mcommit 8b3325c0344309ac5cbb219a2ad882e3273fa320[m
+Author: Obed Appiah <98442128+obedappiah@users.noreply.github.com>
+Date:   Fri Oct 25 16:47:08 2024 -0400
+
+    did some
+
+[33mcommit 74162595cb2106d403738072095734d0fd6e9c6c[m
+Merge: a1eb743 ae19e0f
+Author: Obed Appiah <98442128+obedappiah@users.noreply.github.com>
+Date:   Fri Oct 25 16:43:16 2024 -0400
+
+    Merge remote-tracking branch 'upstream/task-nested' into solved-nested
+
+[33mcommit ae19e0f49b735fbae3265ca0fb4cd81014f7cbe5[m[33m ([m[1;31mupstream/task-nested[m[33m)[m
+Author: Greg Nelson <gregory.nelson@maine.edu>
+Date:   Thu Oct 17 11:59:30 2024 -0400
+
+    reduced workload by half
+
+[33mcommit 974fb090cf8de743ac8e397fc7f51febd4f589de[m
+Merge: 5a7921b 67edb6d
+Author: Greg Nelson <gregory.nelson@maine.edu>
+Date:   Thu Oct 17 11:26:01 2024 -0400
+
+    Merge so 2024 works
+
+[33mcommit a1eb743d163c6cebfe9d6b4e130fa819ce47d60f[m[33m ([m[1;31morigin/solved-objects[m[33m, [m[1;32msolved-objects[m[33m)[m
+Merge: f81281e 9b9adb6
+Author: obedappiah <obedappiah>
+Date:   Tue Oct 1 21:38:37 2024 -0400
+
+    Merge remote-tracking branch 'upstream/task-objects' into solved-objects
+
+[33mcommit f81281e93dbd634a4edf4c774b21b7250cdbc741[m[33m ([m[1;31morigin/solved-arrays[m[33m, [m[1;32msolved-arrays[m[33m)[m
+Merge: fe266cf f0d316b
+Author: obedappiah <obedappiah>
+Date:   Tue Sep 24 21:45:23 2024 -0400
+
+    Merge remote-tracking branch 'upstream/task-arrays' into solved-arrays
+
+[33mcommit fe266cf9b2510c2a00ce308b3f913ffd2a3ad2c4[m
+Merge: 6f88bb0 b93de13
+Author: obedappiah <obedappiah>
+Date:   Thu Sep 19 23:11:59 2024 -0400
+
+    Merge branch 'main' of https://github.com/obedappiah/tasks
+
+[33mcommit 6f88bb0c822d7172eb76f198e15a240fed9607f6[m
+Author: obedappiah <obedappiah>
+Date:   Thu Sep 19 23:09:58 2024 -0400
+
+    new
+
+[33mcommit 2509b2b00c1389bf8ef10f048d8e7d9389683b2c[m
+Merge: 92e3697 80f1cf6
+Author: obedappiah <obedappiah>
+Date:   Thu Sep 19 21:52:54 2024 -0400
+
+    Merge remote-tracking branch 'upstream/task-html-css'
+
+[33mcommit b93de132485e34179fd400554f73b019fa3ace7b[m
+Merge: 0e8dee4 c53f6b1
+Author: Obed Apiah <98442128+obedappiah@users.noreply.github.com>
+Date:   Thu Sep 19 20:59:35 2024 -0400
+
+    Merge pull request #2 from obedappiah/solved-html-css
+    
+    Solved html css
+
+[33mcommit 92e3697871311587f0472617f43e268d877c9733[m
+Merge: 0e8dee4 e11693a
+Author: obedappiah <obedappiah>
+Date:   Thu Sep 19 20:33:10 2024 -0400
+
+    Merge remote-tracking branch 'upstream/task-functions'
+
+[33mcommit c53f6b1da361f3ea70c09367a44ec8ca9dad0447[m[33m ([m[1;31morigin/solved-html-css[m[33m, [m[1;32msolved-html-css[m[33m)[m
+Author: obedappiah <obedappiah>
+Date:   Thu Sep 19 19:41:01 2024 -0400
+
+    work i commited with Dr Greg
+
+[33mcommit 33b18627baa416d67cb62ca043e56af4a949dad9[m
+Merge: 022b615 80f1cf6
+Author: Obed Appiah <obed.appiah@maine.edu>
+Date:   Thu Sep 19 13:23:04 2024 -0400
+
+    Merge remote-tracking branch 'upstream/task-html-css' into solved-html-css
+
+[33mcommit 022b61530a8e0f1ff9d8493a7ad1a38811210a4f[m
+Author: Obed Appiah <obed.appiah@maine.edu>
+Date:   Thu Sep 19 13:12:51 2024 -0400
+
+    committing
+
+[33mcommit daa21794c6398bab132126aba895242c7dc1cff8[m
+Author: Obed Appiah <obed.appiah@maine.edu>
+Date:   Thu Sep 19 13:07:47 2024 -0400
+
+    work so far
+
+[33mcommit 80f1cf6ecfc7e83533d76aa3a68e364f2f0e0614[m[33m ([m[1;31mupstream/task-html-css[m[33m)[m
+Author: Greg Nelson <gln@georgetown.edu>
+Date:   Tue Sep 17 12:48:04 2024 -0400
+
+    Update HtmlCss.test.tsx
+
+[33mcommit 0e8dee48d074d8f4f488e11a53dd84b618282c41[m
+Merge: dc6afbb b248708
+Author: Obed Apiah <98442128+obedappiah@users.noreply.github.com>
+Date:   Thu Sep 12 02:22:57 2024 -0400
+
+    Merge pull request #1 from obedappiah/solved-first-branch
+    
+    Solved first branch
+
+[33mcommit b248708f2f1aa69ed28379847a2a1753de634c01[m[33m ([m[1;31morigin/solved-functions[m[33m, [m[1;31morigin/solved-first-branch[m[33m, [m[1;32msolved-functions[m[33m, [m[1;32msolved-first-branch[m[33m)[m
+Merge: dc6afbb a6acb43
+Author: Obed Appiah <obed.appiah@maine.edu>
+Date:   Thu Sep 12 01:45:42 2024 -0400
+
+    Merge remote-tracking branch 'upstream/task-first-branch' into solved-first-branch
+
+[33mcommit dc6afbb3305cdca24cce8d37c67f871ca9985902[m
+Author: Obed Appiah <obed.appiah@maine.edu>
+Date:   Thu Sep 12 01:31:55 2024 -0400
+
+    Added name to App
+
+[33mcommit 5a7921b7d6559d965829ba783158f23d23275411[m
+Merge: 9b9adb6 2e9ba49
+Author: Greg Nelson <gregory.nelson@maine.edu>
+Date:   Sun Sep 8 00:53:00 2024 -0400
+
+    Merge branch 'main' into task-objects
+
+[33mcommit 67edb6dc50d9a60c1eb64448daa6b53aa9bc3cf6[m
+Merge: 1b76b80 2e9ba49
+Author: Greg Nelson <gregory.nelson@maine.edu>
+Date:   Sun Sep 8 00:52:59 2024 -0400
+
+    Merge branch 'main' into task-nested
+
+[33mcommit 2e9ba492eda16f9f32a8555ca709eb641ed2c1e1[m[33m ([m[1;31mupstream/main[m[33m)[m
+Author: Greg Nelson <gregory.nelson@maine.edu>
+Date:   Fri Sep 6 18:30:36 2024 -0400
+
+    update readme and names
+
+[33mcommit c419dc919275541b287452c52aac7bf55c2b409c[m
+Author: Austin Cory Bart <acbart@vt.edu>
+Date:   Sat Aug 24 14:20:29 2024 -0400
+
+    Fix linting
+
+[33mcommit cc7d4db27c04fce10f1974a3f179adaaffc739f2[m
+Author: Austin Cory Bart <acbart@vt.edu>
+Date:   Sat Aug 24 14:19:46 2024 -0400
+
+    Update react tests to use async
+
+[33mcommit 82faaccfdddde466de5a4d0080af257364271684[m
+Author: Austin Cory Bart <acbart@vt.edu>
+Date:   Sat Aug 24 13:45:32 2024 -0400
+
+    Fix react return value
+
+[33mcommit 23314f383f4ac6257b7c904bfff21496bf743a68[m
+Author: Austin Cory Bart <acbart@vt.edu>
+Date:   Sat Aug 24 13:41:03 2024 -0400
+
+    update point values for tests
+
+[33mcommit 1b76b8050daddd7c26e8cb372b2ad710974a66be[m
+Author: Austin Cory Bart <acbart@vt.edu>
+Date:   Sat Aug 24 13:33:40 2024 -0400
+
+    Fix formatting
+
+[33mcommit 304184e9c70c1ed35eff2a7e522c3e71d9204d17[m
+Author: Austin Cory Bart <acbart@vt.edu>
+Date:   Tue Mar 1 16:38:02 2022 -0500
+
+    Fix typo in editOption test, and missing return type for editOption
+
+[33mcommit a368ad06a9847e4cb04fc2d544ff49997db54e90[m
+Author: Austin Cory Bart <acbart@vt.edu>
+Date:   Sat Feb 19 13:52:24 2022 -0500
+
+    Forgot the task record!
+
+[33mcommit c574699cc746d22d95223bfc85d2e0cb8d5843e8[m
+Author: Austin Cory Bart <acbart@vt.edu>
+Date:   Wed Feb 9 13:22:01 2022 -0500
+
+    Nested tests (phew)
+
+[33mcommit c955718b2a52fe88f0f3b27b00b8fcb74e8be0ca[m
+Author: Austin Cory Bart <acbart@vt.edu>
+Date:   Wed Feb 9 13:21:43 2022 -0500
+
+    Add a little hint for a tough one
+
+[33mcommit d71d9fcc94831dc1aea8d2aa847feeadeed6b9c4[m
+Author: Austin Cory Bart <acbart@vt.edu>
+Date:   Wed Feb 9 13:20:46 2022 -0500
+
+    Expand questions test data
+
+[33mcommit 4d29d2132a060f7f91420d71eea4e80ab72e7727[m
+Author: Austin Cory Bart <acbart@vt.edu>
+Date:   Wed Feb 9 13:20:35 2022 -0500
+
+    Document Question interface
+
+[33mcommit 879fe177e356794eedf9f893fe0e865e49f36eb7[m
+Author: Austin Cory Bart <acbart@vt.edu>
+Date:   Tue Feb 8 00:36:37 2022 -0500
+
+    First stab at nested tasks
+
+[33mcommit 9a2402444e847b2c05ce0c9a6887534a249d7c46[m
+Author: Austin Cory Bart <acbart@vt.edu>
+Date:   Tue Feb 8 00:36:21 2022 -0500
+
+    Create answer interface
+
+[33mcommit 09d3d4f104a2cacab2641271c5c6cab55424efd1[m
+Author: Austin Cory Bart <acbart@vt.edu>
+Date:   Sun Feb 6 18:33:46 2022 -0500
+
+    Move Question interface to separate file
+
+[33mcommit 3660252c2f3f53f262fadb91e8d14d0eeffa6cd2[m
+Author: Austin Cory Bart <acbart@vt.edu>
+Date:   Wed Feb 2 13:12:40 2022 -0500
+
+    First stab at questions
+
+[33mcommit 9b9adb6f2ccbd1113a09cb8e13186d6d4f829928[m[33m ([m[1;31mupstream/task-objects[m[33m)[m
+Author: Austin Cory Bart <acbart@vt.edu>
+Date:   Sat Aug 24 13:27:44 2024 -0400
+
+    Fix formatting
+
+[33mcommit 406ffb2b572cb14e885af2a2fddc8e9cc42c97dd[m
+Author: Austin Cory Bart <acbart@vt.edu>
+Date:   Sun Feb 6 18:33:46 2022 -0500
+
+    Move Question interface to separate file
+
+[33mcommit c2e556dece7ea7737c13bdd355ef3ebcee121e70[m
+Author: Austin Cory Bart <acbart@vt.edu>
+Date:   Wed Feb 2 13:12:40 2022 -0500
+
+    First stab at questions
+
+[33mcommit f0d316b36ae394d502e75849b5532b76ffdf7c68[m[33m ([m[1;31mupstream/task-arrays[m[33m)[m
+Author: Austin Cory Bart <acbart@vt.edu>
+Date:   Sat Aug 24 13:21:13 2024 -0400
+
+    Add in points
+
+[33mcommit f87771e7d8058f6c4fc6d8c6d036953f65b3a775[m
+Author: Austin Cory Bart <acbart@vt.edu>
+Date:   Fri Feb 11 14:24:17 2022 -0500
+
+    Update arrays.test.ts
+
+[33mcommit b8777b1873553a2e2780b67fd504486b9d16bd92[m
+Author: Austin Cory Bart <acbart@vt.edu>
+Date:   Tue Feb 1 16:09:25 2022 -0500
+
+    Fix question text
+
+[33mcommit f25333778032fc42866a278af6a3ce871f735150[m
+Author: Austin Cory Bart <acbart@vt.edu>
+Date:   Tue Feb 1 16:09:10 2022 -0500
+
+    Add in the rest of the tests
+
+[33mcommit 7cc4e3f20e61307e9f22eb466fe21871b3eefbd3[m
+Author: Austin Cory Bart <acbart@vt.edu>
+Date:   Tue Feb 1 14:51:32 2022 -0500
+
+    First stab at array problems
+
+[33mcommit e11693a366f61cdb442c6f6f5822bd49e2dd604f[m[33m ([m[1;31mupstream/task-functions[m[33m)[m
+Author: Austin Cory Bart <acbart@vt.edu>
+Date:   Sat Aug 24 13:18:24 2024 -0400
+
+    Add in points
+
+[33mcommit cf1d21a31d00c2e8dc8bb7c76f372b3e0adebfbe[m
+Author: Austin Cory Bart <acbart@vt.edu>
+Date:   Sat Aug 24 13:15:59 2024 -0400
+
+    Update formatting
+
+[33mcommit 4cd1900783f690690229b7c17cf9e81995f52b3a[m
+Author: Austin Cory Bart <acbart@vt.edu>
+Date:   Thu Feb 3 14:27:18 2022 -0500
+
+    Explain what the actual functions require you to do
+
+[33mcommit bd06d5d0e3ed264f7bffb4e8e4811d0efc170255[m
+Author: Austin Cory Bart <acbart@vt.edu>
+Date:   Thu Feb 3 14:27:08 2022 -0500
+
+    Move around some of the functions
+
+[33mcommit 9722564e99cecda5d50dd95524c94a76c4cda923[m
+Author: Austin Cory Bart <acbart@vt.edu>
+Date:   Sat Jan 29 23:39:22 2022 -0500
+
+    Fix issue in fahrenheit conversion
+
+[33mcommit a48653022ec3c8b7ce99cf49d98b041e20815420[m
+Author: Austin Cory Bart <acbart@vt.edu>
+Date:   Sat Jan 29 23:30:17 2022 -0500
+
+    Fix test organization
+
+[33mcommit 83c4461f9dbe7d2a66c09eed18959565a302eea2[m
+Author: Austin Cory Bart <acbart@vt.edu>
+Date:   Sat Jan 29 23:23:45 2022 -0500
+
+    Basic functions tests and stubs
+
+[33mcommit 4d43d7a5d133522b0a8d92e1cb3d7e4053a81992[m
+Author: Austin Cory Bart <acbart@vt.edu>
+Date:   Sat Aug 24 13:12:28 2024 -0400
+
+    Add in points
+
+[33mcommit 0a24364f67b1ee221ebe175d6c494d5eca6ad7dc[m
+Author: Austin Cory Bart <acbart@vt.edu>
+Date:   Sat Aug 24 13:10:09 2024 -0400
+
+    Add in new css test
+
+[33mcommit b66d4de909f74de4cba160a6fff05b078b9b47cc[m
+Author: Austin Cory Bart <acbart@vt.edu>
+Date:   Mon Jan 31 16:32:13 2022 -0500
+
+    See previous commit message
+
+[33mcommit 8dff2b64a2efc0b1b49703077965fe5e334eab1a[m
+Author: Austin Cory Bart <acbart@vt.edu>
+Date:   Mon Jan 31 16:31:58 2022 -0500
+
+    Updated CSS tests, left a note about additional tests
+
+[33mcommit 3bf4550a8f042dee28a57c06abec05dfce779519[m
+Author: Austin Cory Bart <acbart@vt.edu>
+Date:   Sun Jan 30 00:55:24 2022 -0500
+
+    Fix the image test
+
+[33mcommit b26100f543943eced73fdff33784861243c65386[m
+Author: Austin Cory Bart <acbart@vt.edu>
+Date:   Sun Jan 30 00:47:43 2022 -0500
+
+    More html tests
+
+[33mcommit d04739d1d2ec0c934c0ecf1dc05ac1289063627d[m
+Author: Austin Cory Bart <acbart@vt.edu>
+Date:   Sun Jan 30 00:24:38 2022 -0500
+
+    Some logging tests
+
+[33mcommit ac36b32302a8ea2e66b4b954626c8e396e172075[m
+Author: Austin Cory Bart <acbart@vt.edu>
+Date:   Sat Jan 29 23:59:24 2022 -0500
+
+    First set of tests
+
+[33mcommit a6acb43c4c33ec468b0ebe9e2f3f60c7db9949a8[m[33m ([m[1;31mupstream/task-first-branch[m[33m)[m
+Merge: 2f0146c e6b1dab
+Author: Austin Cory Bart <acbart@vt.edu>
+Date:   Sat Aug 24 12:55:43 2024 -0400
+
+    Merge branch 'task-first-branch' of https://github.com/frontend-fun/tasks into task-first-branch
+
+[33mcommit 2f0146c22beca5c5ac48603876f0fa8ea2e2e905[m
+Author: Austin Cory Bart <acbart@vt.edu>
+Date:   Thu Feb 3 14:10:55 2022 -0500
+
+    Allow one or more instances of the Hello World text
+
+[33mcommit fbdebdec2006b01d3976bd9408037baf82eb5e56[m
+Author: Austin Cory Bart <acbart@vt.edu>
+Date:   Mon Jan 31 16:41:17 2022 -0500
+
+    Rename text.Test.tsx to text.test.tsx
+
+[33mcommit b8b8878c873d4faa2fd5f04d656e23d66c7d6cef[m
+Author: Austin Cory Bart <acbart@vt.edu>
+Date:   Mon Jan 31 16:56:42 2022 -0500
+
+    Include the task info
+
+[33mcommit 7fe9ca316fad2e694586e037fe601b85a2584c56[m
+Author: Austin Cory Bart <acbart@vt.edu>
+Date:   Mon Jan 31 16:37:54 2022 -0500
+
+    Require Hello World in the document
+
+[33mcommit 7a207345d9e404afd04607811b89bb758de02905[m
+Author: Austin Cory Bart <acbart@vt.edu>
+Date:   Sat Aug 24 12:52:12 2024 -0400
+
+    Include json test command here
+
+[33mcommit 214e2852dab069a8040cb3c696a28a9792fee916[m
+Merge: bbc42c0 fcb81f7
+Author: Austin Cory Bart <acbart@udel.edu>
+Date:   Tue Aug 20 13:50:38 2024 -0400
+
+    Merge pull request #9 from frontend-fun/update-branches
+    
+    Rename deploy script
+
+[33mcommit fcb81f7d8f4246377eff88613db266f0edfa7118[m[33m ([m[1;31mupstream/update-branches[m[33m)[m
+Author: Austin Cory Bart <acbart@vt.edu>
+Date:   Tue Aug 20 13:50:17 2024 -0400
+
+    Rename deploy script
+
+[33mcommit bbc42c095a39946ac33091dec6266257502ac2a6[m
+Merge: a36ba0c eebe36c
+Author: Austin Cory Bart <acbart@udel.edu>
+Date:   Tue Aug 20 13:48:44 2024 -0400
+
+    Merge pull request #8 from frontend-fun/update-branches
+    
+    Forget globbing
+
+[33mcommit eebe36c45ae02cb67b97a38d9d12f96ef0426a2b[m
+Author: Austin Cory Bart <acbart@vt.edu>
+Date:   Tue Aug 20 13:48:19 2024 -0400
+
+    Forget globbing
+
+[33mcommit a36ba0cde75c7b7908e0be7c3f473043a5a6e512[m
+Merge: a68506a dbae426
+Author: Austin Cory Bart <acbart@udel.edu>
+Date:   Tue Aug 20 13:45:11 2024 -0400
+
+    Merge pull request #7 from frontend-fun/update-branches
+    
+    Needed globstar
+
+[33mcommit dbae426028ad396c4dffb7948ba8fa31850d4cd0[m
+Author: Austin Cory Bart <acbart@vt.edu>
+Date:   Tue Aug 20 13:44:14 2024 -0400
+
+    Needed globstar
+
+[33mcommit a68506af4a3dec4b9da2b483fc39949ce23bf662[m
+Merge: 0483016 7fc5ad2
+Author: Austin Cory Bart <acbart@udel.edu>
+Date:   Tue Aug 20 13:40:13 2024 -0400
+
+    Merge pull request #6 from frontend-fun/update-branches
+    
+    Simplify integrity checks
+
+[33mcommit 7fc5ad218aa695d5004968e4d0b332ba00ba2d77[m
+Author: Austin Cory Bart <acbart@vt.edu>
+Date:   Tue Aug 20 13:39:22 2024 -0400
+
+    Simplify integrity checks
+
+[33mcommit 0483016291979bcbe9474db94cd2550cbac5ac6b[m
+Merge: 268363c 1ea25a9
+Author: Austin Cory Bart <acbart@udel.edu>
+Date:   Tue Aug 20 13:28:24 2024 -0400
+
+    Merge pull request #5 from frontend-fun/update-branches
+    
+    Try to make stupid babel plugin warning go away
+
+[33mcommit 1ea25a98c7d6a7f0d6a72c2b1c3ab3d140e1cb15[m
+Author: Austin Cory Bart <acbart@vt.edu>
+Date:   Tue Aug 20 13:27:04 2024 -0400
+
+    Try to make stupid babel plugin warning go away
+
+[33mcommit 268363c2dba4ca5acc47e87085e45e424c46ce6d[m
+Merge: c9aba7f a00615a
+Author: Austin Cory Bart <acbart@udel.edu>
+Date:   Tue Aug 20 13:23:26 2024 -0400
+
+    Merge pull request #4 from frontend-fun/update-branches
+    
+    Update branches
+
+[33mcommit a00615af14a04aec9ec4a21e66ab571fbe951f7d[m
+Author: Austin Cory Bart <acbart@vt.edu>
+Date:   Tue Aug 20 13:22:46 2024 -0400
+
+    Move build to dist
+
+[33mcommit 52dc1bb82d895725f5831f0a50dbc150f189c810[m
+Author: Austin Cory Bart <acbart@vt.edu>
+Date:   Tue Aug 20 13:15:11 2024 -0400
+
+    Update react testing library, don't lint jest
+
+[33mcommit c9aba7f65ea712cc3b11fc57896d6f00481f2f32[m
+Merge: db36697 8764153
+Author: Austin Cory Bart <acbart@udel.edu>
+Date:   Tue Aug 20 13:08:16 2024 -0400
+
+    Merge pull request #3 from frontend-fun/update-branches
+    
+    Switch jobs back to steps
+
+[33mcommit 876415353e6ba5b06dc503afa4e50e7c9d4ec927[m
+Author: Austin Cory Bart <acbart@vt.edu>
+Date:   Tue Aug 20 13:07:36 2024 -0400
+
+    Switch jobs back to steps
+
+[33mcommit db36697c322eeb575acb0017fa18841d091baab7[m
+Merge: 646e7c8 cb2e43c
+Author: Austin Cory Bart <acbart@udel.edu>
+Date:   Tue Aug 20 12:53:11 2024 -0400
+
+    Merge pull request #2 from frontend-fun/update-branches
+    
+    Create dist directory at start of worfklow
+
+[33mcommit cb2e43c783c80e46a60ec6613b5e9c7096949827[m
+Author: Austin Cory Bart <acbart@vt.edu>
+Date:   Tue Aug 20 12:52:44 2024 -0400
+
+    Create dist directory at start of worfklow
+
+[33mcommit 646e7c886ae102ff8e869cc06a7182408ae21126[m
+Merge: 9d0f9b3 55f976e
+Author: Austin Cory Bart <acbart@udel.edu>
+Date:   Tue Aug 20 12:51:23 2024 -0400
+
+    Merge pull request #1 from frontend-fun/update-branches
+    
+    Big 2024 update to starter files and workflow
+
+[33mcommit 55f976e7cf3e4e6b18a1a50176b57e71a1e22b11[m
+Author: Austin Cory Bart <acbart@vt.edu>
+Date:   Tue Aug 20 12:49:47 2024 -0400
+
+    Big 2024 update to starter files and workflow
+
+[33mcommit 9d0f9b3bb4cda79ddecc42dfb1dff2a0bd9148b1[m
+Merge: 88bd3fa 7a31beb
+Author: Austin Cory Bart <acbart@udel.edu>
+Date:   Mon Feb 13 19:37:16 2023 -0500
+
+    Merge pull request #148 from craftablescience/fix/deprecated-set-output
+    
+    fix: set-output is deprecated
+
+[33mcommit 7a31beb678649d35667f5b40ad0544c0b19ce287[m
+Author: craftablescience <me@craftablescience.info>
+Date:   Tue Feb 7 15:02:13 2023 -0500
+
+    fix: set-output is deprecated
+
+[33mcommit eb40f3eb8827e668c1949ca0c9c13db2f52fe4b4[m
+Author: Austin Cory Bart <acbart@vt.edu>
+Date:   Sat Feb 19 13:53:22 2022 -0500
+
+    Forgot task record for state
+
+[33mcommit 88bd3fa60097cdf7cd30dfadf369ae72cd9b365d[m
+Author: Austin Cory Bart <acbart@udel.edu>
+Date:   Tue Feb 15 18:38:38 2022 -0500
+
+    Remove PRs triggering deploys
+
+[33mcommit c0bbc391d8eb1994783a8207e386f45578813333[m
+Author: Austin Cory Bart <acbart@vt.edu>
+Date:   Sun Feb 13 14:38:40 2022 -0500
+
+    Updated, complete tests for all state components
+
+[33mcommit d6c10cd39b7364ee199ffa920d7fa4a60b42386f[m
+Merge: ab9bfb5 9765863
+Author: Austin Cory Bart <acbart@vt.edu>
+Date:   Sun Feb 13 14:34:36 2022 -0500
+
+    Merge branch 'main' of https://github.com/UD-CISC275-S22/react-typescript-starter into task-state
+
+[33mcommit 97658638bc1a69bfa9e7a84a90a0307145db7db2[m
+Author: Austin Cory Bart <acbart@vt.edu>
+Date:   Wed Feb 9 18:30:51 2022 -0500
+
+    Another extra paren error
+
+[33mcommit ab9bfb53c8eb4842f3149957337db26e621eff2c[m
+Author: Austin Cory Bart <acbart@vt.edu>
+Date:   Wed Feb 9 18:10:22 2022 -0500
+
+    Basic starter files for components
+
+[33mcommit 005c5d3549939b06c2919f8f11ff77d4b2c3fef0[m
+Author: Austin Cory Bart <acbart@vt.edu>
+Date:   Wed Feb 9 13:31:31 2022 -0500
+
+    Add another exception for our linter, arrow conditionals
+
+[33mcommit b1bbbc869d8093ca9e286df1330ab150e7d4901d[m
+Author: Austin Cory Bart <acbart@vt.edu>
+Date:   Wed Feb 9 13:22:01 2022 -0500
+
+    Nested tests (phew)
+
+[33mcommit 6ae0b6f210c37a37dace7b94ef0fc5c0b8fbcbfb[m
+Author: Austin Cory Bart <acbart@vt.edu>
+Date:   Wed Feb 9 13:21:43 2022 -0500
+
+    Add a little hint for a tough one
+
+[33mcommit 5c39a97a647cd7e5d686beda8208a81e5f339478[m
+Author: Austin Cory Bart <acbart@vt.edu>
+Date:   Wed Feb 9 13:20:46 2022 -0500
+
+    Expand questions test data
+
+[33mcommit 3a793cc12152d73df161d3a61691f72d1dc6dde8[m
+Author: Austin Cory Bart <acbart@vt.edu>
+Date:   Wed Feb 9 13:20:35 2022 -0500
+
+    Document Question interface
+
+[33mcommit 52f6721f58813cf3fd2c769a0f6eb969caddee58[m
+Author: Austin Cory Bart <acbart@vt.edu>
+Date:   Wed Feb 9 11:21:07 2022 -0500
+
+    Update linter to allow parens in return's assignments
+
+[33mcommit 66eca1e46618ad5072562e594abe27eeb0df9d98[m
+Author: Austin Cory Bart <acbart@vt.edu>
+Date:   Tue Feb 8 09:37:24 2022 -0500
+
+    Include Bootstrap CSS
+
+[33mcommit 51221ee3f303c4927f4efd8f4e286c754cb7b006[m
+Author: Austin Cory Bart <acbart@vt.edu>
+Date:   Tue Feb 8 00:36:37 2022 -0500
+
+    First stab at nested tasks
+
+[33mcommit dc3662af02ffe003b2044d4262bddf02ad6c7333[m
+Author: Austin Cory Bart <acbart@vt.edu>
+Date:   Tue Feb 8 00:36:21 2022 -0500
+
+    Create answer interface
+
+[33mcommit 2c852d620be705187b5ade2a68df632c6d6d4256[m
+Author: Austin Cory Bart <acbart@vt.edu>
+Date:   Sun Feb 6 18:33:46 2022 -0500
+
+    Move Question interface to separate file
+
+[33mcommit a0a0249a96f015b930a5374bf440db761d377a95[m
+Author: Austin Cory Bart <acbart@vt.edu>
+Date:   Sat Feb 5 15:17:30 2022 -0500
+
+    Ignore line endings
+
+[33mcommit e6b1dab1961daf6f03459789cef974bf043501f2[m
+Author: Austin Cory Bart <acbart@vt.edu>
+Date:   Thu Feb 3 14:10:55 2022 -0500
+
+    Allow one or more instances of the Hello World text
+
+[33mcommit 11a3e6494e171eba175c6d30e6b21fa084a22109[m
+Author: Austin Cory Bart <acbart@vt.edu>
+Date:   Thu Feb 3 10:27:53 2022 -0500
+
+    Remove console warnings
+
+[33mcommit c8f7386579e4f544e0c1e153416ae2e49c6fbf02[m
+Author: Austin Cory Bart <acbart@vt.edu>
+Date:   Wed Feb 2 13:44:38 2022 -0500
+
+    Update node.js.yml
+
+[33mcommit 4ae3f3051eadba8efdbfe3848f31840db234081f[m
+Author: Austin Cory Bart <acbart@vt.edu>
+Date:   Wed Feb 2 13:41:07 2022 -0500
+
+    Update node.js.yml
+
+[33mcommit 4b8595688bd0b3efeb8a2bb427afd784910d8e47[m
+Author: Austin Cory Bart <acbart@vt.edu>
+Date:   Wed Feb 2 13:38:35 2022 -0500
+
+    Update node.js.yml
+
+[33mcommit 986b28ac0afb41e603602013f71e6ef6e257c722[m
+Author: Austin Cory Bart <acbart@vt.edu>
+Date:   Wed Feb 2 13:12:40 2022 -0500
+
+    First stab at questions
+
+[33mcommit fee03d3a2b67c605e64870359a006e2790d20fed[m
+Merge: 3e381f3 a7dee05
+Author: Austin Cory Bart <acbart@vt.edu>
+Date:   Mon Jan 31 16:56:45 2022 -0500
+
+    Merge branch 'task-first-branch' of https://github.com/UD-CISC275-S22/tasks into task-first-branch
+
+[33mcommit 3e381f38b1d44afd102eb053a8ba9a48a069434e[m
+Author: Austin Cory Bart <acbart@vt.edu>
+Date:   Mon Jan 31 16:56:42 2022 -0500
+
+    Include the task info
+
+[33mcommit a7dee05e0bee0379110c6189433d12482280146a[m
+Author: Austin Cory Bart <acbart@vt.edu>
+Date:   Mon Jan 31 16:41:17 2022 -0500
+
+    Rename text.Test.tsx to text.test.tsx
+
+[33mcommit 2b5f14cf6979706d394a7699aa00f2b5e9d02bbb[m
+Author: Austin Cory Bart <acbart@vt.edu>
+Date:   Mon Jan 31 16:37:54 2022 -0500
+
+    Require Hello World in the document
+
+[33mcommit 0736d09fc03f1825e858d811f92b6e4776f99bbb[m
+Author: Austin Cory Bart <acbart@vt.edu>
+Date:   Sat Jan 29 13:15:20 2022 -0500
+
+    Modify text slightly of App.tsx
+
+[33mcommit a43271e71c2b2edeec6ead9fc6c27724400ed872[m
+Author: Austin Cory Bart <acbart@vt.edu>
+Date:   Fri Jan 28 14:29:29 2022 -0500
+
+    Ignore certain files when checking code coverage
+
+[33mcommit 05da68bb4a82ad1a1f6c97ca36e8010f94d62ea4[m
+Author: Austin Cory Bart <acbart@vt.edu>
+Date:   Fri Jan 28 14:24:01 2022 -0500
+
+    Report coverage too
+
+[33mcommit bc72ffb7fc559a05a73dafda73b1c8da59e1e274[m
+Author: Austin Cory Bart <acbart@vt.edu>
+Date:   Fri Jan 28 14:20:53 2022 -0500
+
+    Dump coverage to file in public
+
+[33mcommit 2d06eae901c415da2cf1872642b43eae433db5b4[m
+Author: Austin Cory Bart <acbart@vt.edu>
+Date:   Thu Jan 27 13:49:41 2022 -0500
+
+    Clarify instructions
+
+[33mcommit 5e0aaa1070ff1602dc47e3589b71a6c08caa16d2[m
+Author: Austin Cory Bart <acbart@vt.edu>
+Date:   Thu Jan 27 13:38:20 2022 -0500
+
+    Update initial test and readme instructions
+
+[33mcommit 737c81ff6ef36da2fb61031e6899f035ebfb2d33[m
+Author: Austin Cory Bart <acbart@vt.edu>
+Date:   Thu Jan 27 13:34:45 2022 -0500
+
+    Update dependencies, set up prettier
+
+[33mcommit 2bb43c48db7f19c697263d40c5801250bc259160[m
+Author: Austin Cory Bart <acbart@vt.edu>
+Date:   Tue Jan 25 11:32:55 2022 -0500
+
+    Fixed formatting on file
+
+[33mcommit 53936b5dd046f0708b1559d9930531f2d98011cb[m
+Author: Austin Cory Bart <acbart@vt.edu>
+Date:   Tue Jan 25 11:32:40 2022 -0500
+
+    Updated package lock
+
+[33mcommit 740ebf86fb777ca628d6e3ef5653d68248bb562b[m
+Author: Austin Cory Bart <acbart@vt.edu>
+Date:   Tue Jan 25 11:32:23 2022 -0500
+
+    Make project name more generic
+
+[33mcommit 5c2776f8bd8b38861ef7dd561c9013ec1bea52fd[m
+Author: Austin Cory Bart <acbart@vt.edu>
+Date:   Tue Jan 25 11:32:09 2022 -0500
+
+    Setting up prettier to automatically fix files formatting
+
+[33mcommit 26ac177c776917c2992604a55b7eafb3dc257d29[m
+Author: Austin Cory Bart <acbart@vt.edu>
+Date:   Tue Oct 12 12:15:07 2021 -0400
+
+    Update README.md
+
+[33mcommit 727961fd522b9ee0391c891ae1793722c36c9e5e[m
+Author: Austin Cory Bart <acbart@vt.edu>
+Date:   Mon Oct 11 16:43:39 2021 -0400
+
+    Update App.test.tsx
+
+[33mcommit 18938be0c3e3ae254425b81c04aa10e1e81fbe87[m
+Author: Austin Cory Bart <acbart@vt.edu>
+Date:   Mon Oct 11 16:31:05 2021 -0400
+
+    Update App.tsx
+
+[33mcommit bc88d78448b1bb50b274bd3f8a0a0dbdfb84d6cf[m
+Author: Austin Cory Bart <acbart@vt.edu>
+Date:   Mon Oct 11 15:06:55 2021 -0400
+
+    Update package.json
+
+[33mcommit 27150f049e56627a6724a4181f472ee900df4420[m
+Author: Austin Cory Bart <acbart@vt.edu>
+Date:   Mon Oct 11 15:06:13 2021 -0400
+
+    Update README.md
+
+[33mcommit 2036b0f6546258643bc8738de56217955b9020ba[m
+Author: Austin Cory Bart <acbart@vt.edu>
+Date:   Mon Oct 11 15:05:53 2021 -0400
+
+    Update build script to set homepage in package.json
+
+[33mcommit d184f98c586c0e3ba3ac75a0667d836df361cd3c[m
+Author: Austin Cory Bart <acbart@vt.edu>
+Date:   Mon Oct 11 13:06:23 2021 -0400
+
+    Update README.md
+
+[33mcommit 92fbfc299df41a0e215c3cf797445e8a2229e7a6[m
+Author: Austin Cory Bart <acbart@vt.edu>
+Date:   Mon Oct 11 13:01:29 2021 -0400
+
+    Update node.js.yml
+
+[33mcommit 0827fba09838f58c27aece09dd3ddc08e85e442e[m
+Author: Austin Cory Bart <acbart@vt.edu>
+Date:   Mon Oct 11 13:00:59 2021 -0400
+
+    Update README.md
+
+[33mcommit 74d5e3225425aff701d114f5d7c011de1f9f52a1[m
+Author: Austin Cory Bart <acbart@vt.edu>
+Date:   Mon Oct 11 12:59:34 2021 -0400
+
+    Update README.md
+
+[33mcommit 311617011d80d717022cae74642189e084de9dc2[m
+Author: Austin Cory Bart <acbart@vt.edu>
+Date:   Mon Oct 11 12:45:41 2021 -0400
+
+    Create .gitattributes
+
+[33mcommit 221cf4988dadb0a758c1031b4b6650f6db4e7642[m
+Author: Austin Cory Bart <acbart@vt.edu>
+Date:   Mon Oct 11 12:39:17 2021 -0400
+
+    Update README.md
+
+[33mcommit 6c6d9129fef73919b10f9579549128023cdb188d[m
+Author: Austin Cory Bart <acbart@vt.edu>
+Date:   Mon Oct 11 12:37:47 2021 -0400
+
+    Update README.md
+
+[33mcommit 45f0cea67748f8ff9a83b9485b909a894de43be1[m
+Author: Austin Cory Bart <acbart@vt.edu>
+Date:   Mon Oct 11 12:36:14 2021 -0400
+
+    Update node.js.yml
+
+[33mcommit 8579199a19e25bcbb6a26e5273c99f5292e2f1f7[m
+Author: Austin Cory Bart <acbart@vt.edu>
+Date:   Mon Oct 11 12:35:32 2021 -0400
+
+    Update package.json
+
+[33mcommit 61412458526991de9b78e15327c6ad6551262e4f[m
+Author: Austin Cory Bart <acbart@vt.edu>
+Date:   Mon Oct 11 12:28:45 2021 -0400
+
+    Update logo.svg
+
+[33mcommit 14bd5d417cd4778be1cd664b54c246236a612866[m
+Author: Josh Lyon <joshlyon@udel.edu>
+Date:   Fri Oct 1 10:04:39 2021 -0400
+
+    Squashed commit - setting up linter
+    
+    Added 1 true brace style to eslintrc
+    
+    Added readme instructions
+    
+    Added eslint and gh-pages workflow
+    
+    max warnings set to 0
+
+[33mcommit c981a4fa7a701207ab488a4fb09fb861b3bfd3a2[m
+Author: Josh Lyon <joshlyon@udel.edu>
+Date:   Thu Sep 30 18:33:49 2021 -0400
+
+    initial commit, added ts project and initial eslintrc
