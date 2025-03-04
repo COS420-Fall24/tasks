@@ -5,12 +5,13 @@ import { Question, QuestionType } from "./interfaces/question";
  * `expected` should be empty strings, the `options` should be an empty list, the `points`
  * should default to 1, and `published` should default to false.
  */
-export function makeBlankQuestion(
-    id: number,
-    name: string,
-    type: QuestionType
-): Question {
-    return {};
+export function makeBlankQuestion(id: number, name: string, type: QuestionType): Question {
+
+    const BlankQuestion = {body: "", expected: "", id: id, name: name, type: type, options: [], points: 1, published: false};
+
+
+
+    return BlankQuestion;
 }
 
 /**
@@ -21,7 +22,13 @@ export function makeBlankQuestion(
  * HINT: Look up the `trim` and `toLowerCase` functions.
  */
 export function isCorrect(question: Question, answer: string): boolean {
-    return false;
+
+    let alt_answer: string = answer.trim().toLowerCase();
+    let alt_expected: string = question.expected.trim().toLowerCase();
+    
+    const iscorrect: boolean = (alt_expected == alt_answer);
+
+    return iscorrect;
 }
 
 /**
@@ -31,7 +38,15 @@ export function isCorrect(question: Question, answer: string): boolean {
  * be exactly one of the options.
  */
 export function isValid(question: Question, answer: string): boolean {
-    return false;
+    let isvalid: boolean; 
+    if (question.type == "short_answer_question"){
+        isvalid = true;
+    }
+    else{
+        const options = question.options;
+        isvalid = options.some((option: string): boolean => answer == option);
+    }
+    return isvalid;
 }
 
 /**
@@ -41,7 +56,11 @@ export function isValid(question: Question, answer: string): boolean {
  * name "My First Question" would become "9: My First Q".
  */
 export function toShortForm(question: Question): string {
-    return "";
+
+    const shortname: string = question.name.substring(0, 10);
+    const shortform: string = String(question.id)+": "+shortname;
+
+    return shortform;
 }
 
 /**
@@ -62,7 +81,15 @@ export function toShortForm(question: Question): string {
  * Check the unit tests for more examples of what this looks like!
  */
 export function toMarkdown(question: Question): string {
-    return "";
+
+    let output: string = "# "+question.name+"\n"+question.body;
+
+    if (question.type == "multiple_choice_question"){
+        let optionsarray = question.options.map((option: string): string => "- "+option);
+        let optionstring = optionsarray.join("\n");
+        output = output+"\n"+optionstring;
+    }
+    return output;
 }
 
 /**
@@ -70,7 +97,8 @@ export function toMarkdown(question: Question): string {
  * `newName`.
  */
 export function renameQuestion(question: Question, newName: string): Question {
-    return question;
+    const newquestion: Question = {...question, name: newName};
+    return newquestion;
 }
 
 /**
@@ -79,7 +107,8 @@ export function renameQuestion(question: Question, newName: string): Question {
  * published; if it was published, now it should be not published.
  */
 export function publishQuestion(question: Question): Question {
-    return question;
+    const newquestion: Question = {...question, published: !question.published};
+    return newquestion;
 }
 
 /**
@@ -89,7 +118,8 @@ export function publishQuestion(question: Question): Question {
  * The `published` field should be reset to false.
  */
 export function duplicateQuestion(id: number, oldQuestion: Question): Question {
-    return oldQuestion;
+    const copyquestion: Question = {...oldQuestion, name: "Copy of "+oldQuestion.name, published: false, id: id};
+    return copyquestion;
 }
 
 /**
@@ -100,7 +130,8 @@ export function duplicateQuestion(id: number, oldQuestion: Question): Question {
  * Check out the subsection about "Nested Fields" for more information.
  */
 export function addOption(question: Question, newOption: string): Question {
-    return question;
+    const newquestion: Question = {...question, options: [...question.options, newOption]};
+    return newquestion;
 }
 
 /**
@@ -111,11 +142,9 @@ export function addOption(question: Question, newOption: string): Question {
  * Notice that the second Question is provided as just an object with a `points`
  * field; but the function call would be the same as if it were a `Question` type!
  */
-export function mergeQuestion(
-    id: number,
-    name: string,
-    contentQuestion: Question,
-    { points }: { points: number }
-): Question {
-    return contentQuestion;
+export function mergeQuestion(id: number, name: string, contentQuestion: Question, { points }: { points: number }): Question {
+
+    const newquestion: Question = {...contentQuestion, id: id, name: name, points: points, published: false};
+
+    return newquestion;
 }
