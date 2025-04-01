@@ -121,32 +121,14 @@ export function renameQuestionById(
  * Remember, if a function starts getting too complicated, think about how a helper function
  * can make it simpler! Break down complicated tasks into little pieces.
  *
+ *
  * Hint: you need to use the ... operator for both the question and the options array
  */
 export function editOption(
     questions: Question[],
     targetId: number,
     targetOptionIndex: number,
-    newOption: string,
+    newOption: string,,
 ): Question[] {
-    return questions.map((question) => {
-       
-        if (question.id === targetId) {
-            let updatedOptions;
-
-            if (targetOptionIndex === -1) {
-                updatedOptions = [...question.options, newOption];
-            } else {
-                
-                updatedOptions = [
-                    ...question.options.slice(0, targetOptionIndex),
-                    newOption,
-                    ...question.options.slice(targetOptionIndex + 1),
-                ];
-            }
-
-            return { ...question, options: updatedOptions };
-        }
-        return question;
-    });
+    return [];
 }
