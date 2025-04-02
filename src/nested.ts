@@ -111,6 +111,14 @@ export function renameQuestionById(
     );
 }
 
+export function editOption(
+    questions: Question[],
+    targetId: number,
+    targetOptionIndex: number,
+    newOption: string,
+): Question[] {
+    return [];
+}
 /**
  * Consumes an array of Questions and produces a new array of Questions, where all
  * the Questions are the same EXCEPT for the one with the given `targetId`. That
@@ -124,11 +132,3 @@ export function renameQuestionById(
  *
  * Hint: you need to use the ... operator for both the question and the options array
  */
-export function editOption(
-    questions: Question[],
-    targetId: number,
-    targetOptionIndex: number,
-    newOption: string,,
-): Question[] {
-    return [];
-}
