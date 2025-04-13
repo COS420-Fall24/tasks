@@ -4,3 +4,5 @@ import { Button } from "react-bootstrap";
 export function CycleHoliday(): JSX.Element {
     return <div>Cycle Holiday</div>;
 }
+
+export {};

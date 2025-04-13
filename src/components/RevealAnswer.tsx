@@ -1,6 +1,19 @@
 import React, { useState } from "react";
-import { Button } from "react-bootstrap";
 
-export function RevealAnswer(): React.JSX.Element {
-    return <div>Reveal Answer</div>;
+export function RevealAnswer(): JSX.Element {
+    const [visible, setVisible] = useState<boolean>(false);
+    return (
+        <div>
+            <button
+                onClick={() => {
+                    setVisible(!visible);
+                }}
+            >
+                Reveal Answer
+            </button>
+            {visible && <div>42</div>}
+        </div>
+    );
 }
+
+export {}; // Add this line
