@@ -9,7 +9,7 @@ function App(): React.JSX.Element {
             </header>
             <p>
                 Edit <code>src/App.tsx</code> and save. This page will
-                automatically reload. Signed: Braden Pare
+                automatically reload. Hello World Signed: Braden Pare
             </p>
         </div>
     );
