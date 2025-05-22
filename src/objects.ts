@@ -72,7 +72,7 @@ export function toShortForm(question: Question): string {
  *  - If the question is a `multiple_choice_question`, then the following lines
  *      need to show each option on its line, preceded by a dash and space.
  *
- * The example below might help, but don't include the border!
+ * The example below might help, but DON'T INCLUDE the border!
  * ----------Example-------------
  * |# Name                      |
  * |The body goes here!         |
@@ -83,7 +83,18 @@ export function toShortForm(question: Question): string {
  * Check the unit tests for more examples of what this looks like!
  */
 export function toMarkdown(question: Question): string {
-    return "";
+    const { name, body, type, options } = question;
+    let final: string = "# " + name + "\n" + body + "\n";
+    if (type === "multiple_choice_question") {
+        let choices: string = options.reduce(
+            (totalString: string, choice: string) =>
+                totalString + "- " + choice + "\n",
+            "",
+        );
+        final = final + choices;
+    }
+    return final.trim();
+    //oops
 }
 
 /**
