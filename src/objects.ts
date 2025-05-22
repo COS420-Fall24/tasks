@@ -1,3 +1,4 @@
+import exp from "constants";
 import { Question, QuestionType } from "./interfaces/question";
 
 /**
@@ -8,9 +9,18 @@ import { Question, QuestionType } from "./interfaces/question";
 export function makeBlankQuestion(
     id: number,
     name: string,
-    type: QuestionType
+    type: QuestionType,
 ): Question {
-    return {};
+    return {
+        id: id,
+        name: name,
+        type: type,
+        body: "",
+        expected: "",
+        options: [],
+        points: 1,
+        published: false,
+    };
 }
 
 /**
@@ -21,7 +31,8 @@ export function makeBlankQuestion(
  * HINT: Look up the `trim` and `toLowerCase` functions.
  */
 export function isCorrect(question: Question, answer: string): boolean {
-    return false;
+    let expected: string = question.expected;
+    return answer.toLowerCase().trim() === expected.toLowerCase().trim();
 }
 
 /**
@@ -31,7 +42,15 @@ export function isCorrect(question: Question, answer: string): boolean {
  * be exactly one of the options.
  */
 export function isValid(question: Question, answer: string): boolean {
-    return false;
+    const { type, options } = question;
+
+    if (type === "short_answer_question") {
+        return true;
+    }
+    if (type === "multiple_choice_question") {
+        return options.includes(answer);
+    }
+    return true;
 }
 
 /**
@@ -115,7 +134,7 @@ export function mergeQuestion(
     id: number,
     name: string,
     contentQuestion: Question,
-    { points }: { points: number }
+    { points }: { points: number },
 ): Question {
     return contentQuestion;
 }
