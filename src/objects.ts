@@ -94,7 +94,6 @@ export function toMarkdown(question: Question): string {
         final = final + choices;
     }
     return final.trim();
-    //oops
 }
 
 /**
@@ -102,7 +101,8 @@ export function toMarkdown(question: Question): string {
  * `newName`.
  */
 export function renameQuestion(question: Question, newName: string): Question {
-    return question;
+    let newQuest: Question = { ...question, name: newName };
+    return newQuest;
 }
 
 /**
