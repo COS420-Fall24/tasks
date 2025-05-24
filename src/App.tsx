@@ -15,11 +15,6 @@ function App(): React.JSX.Element {
             </header>
             <h1>This is a Heading</h1>
             <img src={boat} alt="a picture of a boat" />
-            <ul>
-                <li>Thing 1</li>
-                <li>Thing 2</li>
-                <li>Thing 4</li>
-            </ul>
             <button
                 onClick={() => {
                     console.log("Hello World!");

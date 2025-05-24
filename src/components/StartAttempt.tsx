@@ -23,7 +23,7 @@ export function StartAttempt(): React.JSX.Element {
         <div>
             <Button
                 onClick={startQuiz}
-                disabled={inProgress && attemptNumber > 0}
+                disabled={inProgress || attemptNumber < 1}
             >
                 Start Quiz
             </Button>
@@ -31,7 +31,7 @@ export function StartAttempt(): React.JSX.Element {
                 Stop Quiz
             </Button>
 
-            <Button onClick={mulligan} disabled={inProgress}>
+            <Button onClick={mulligan} disabled={inProgress} name="Mulligan">
                 Mulligan
             </Button>
 
