@@ -5,6 +5,7 @@ import { ChangeType } from "./components/ChangeType";
 import { RevealAnswer } from "./components/RevealAnswer";
 import { TwoDice } from "./components/TwoDice";
 import { Counter } from "./components/Counter";
+import { StartAttempt } from "./components/StartAttempt";
 
 function App(): React.JSX.Element {
     return (
@@ -30,6 +31,8 @@ function App(): React.JSX.Element {
             <Counter></Counter>
             <hr />
             <RevealAnswer></RevealAnswer>
+            <hr />
+            <StartAttempt></StartAttempt>
             <hr />
             <TwoDice></TwoDice>
             <hr /> <span style={{ backgroundColor: "red" }}> Hello World </span>
