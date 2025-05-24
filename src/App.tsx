@@ -26,7 +26,7 @@ function App(): React.JSX.Element {
                 Log Hello World
             </button>
             <hr></hr>
-            {/* <DoubleHalf></DoubleHalf> */}
+            <DoubleHalf></DoubleHalf>
             <hr></hr>
             <ChooseTeam></ChooseTeam>
             <hr></hr>
