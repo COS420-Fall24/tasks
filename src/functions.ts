@@ -26,15 +26,17 @@ export function add3(first: number, second: number, third: number): number {
  * mark added to the end.
  */
 export function shout(message: string): string {
-    return "";
+    return message.toUpperCase() + "!";
 }
 
 /**
  * Consumes a string (a message) and returns a boolean if the string ends in a question
  * mark. Do not use an `if` statement in solving this question.
+ *
+ * Used this site to grab the syntax. https://pythonexamples.org/typescript/how-to-get-last-character-in-string
  */
 export function isQuestion(message: string): boolean {
-    return true;
+    return message[message.length - 1] === "?";
 }
 
 /**
@@ -43,5 +45,12 @@ export function isQuestion(message: string): boolean {
  * upper or lower case), then return `false`. Otherwise, return `null`.
  */
 export function convertYesNo(word: string): boolean | null {
-    return true;
+    const low = word.toLowerCase();
+    if (low === "yes") {
+        return true;
+    } else if (low === "no") {
+        return false;
+    } else {
+        return null;
+    }
 }
