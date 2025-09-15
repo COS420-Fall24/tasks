@@ -13,9 +13,16 @@
     }
 }
 
+/*I WANTED TO MAKE IT MATCH SO I DID GOOGLE THIS STUFF */
+.black-button {
+    background-color: #000000 !important;
+    border-color: #000000 !important;
+    color: #ffffff !important;
+}
+
 .App-header {
     width: 100%;
-    background-color: #282c34;
+    background-color: #000000;
     min-height: 40vh;
     display: flex;
     flex-direction: column;
