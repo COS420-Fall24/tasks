@@ -6,7 +6,24 @@ import { Question, QuestionType } from "./interfaces/question";
  * that are `published`.
  */
 export function getPublishedQuestions(questions: Question[]): Question[] {
-    return [];
+    return questions
+        .filter((question: Question): boolean => question.published)
+        .map((question: Question): Question => {
+            const copiedOptions: string[] = question.options.map(
+                (option: string): string => option,
+            );
+
+            return {
+                id: question.id,
+                name: question.name,
+                type: question.type,
+                body: question.body,
+                expected: question.expected,
+                options: copiedOptions,
+                points: question.points,
+                published: question.published,
+            };
+        });
 }
 
 /**
@@ -15,7 +32,29 @@ export function getPublishedQuestions(questions: Question[]): Question[] {
  * `expected`, and an empty array for its `options`.
  */
 export function getNonEmptyQuestions(questions: Question[]): Question[] {
-    return [];
+    return questions
+        .filter(
+            (question: Question): boolean =>
+                question.body !== "" ||
+                question.expected !== "" ||
+                question.options.length > 0,
+        )
+        .map((question: Question): Question => {
+            const copiedOptions: string[] = question.options.map(
+                (option: string): string => option,
+            );
+
+            return {
+                id: question.id,
+                name: question.name,
+                type: question.type,
+                body: question.body,
+                expected: question.expected,
+                options: copiedOptions,
+                points: question.points,
+                published: question.published,
+            };
+        });
 }
 
 /***
@@ -24,9 +63,32 @@ export function getNonEmptyQuestions(questions: Question[]): Question[] {
  */
 export function findQuestion(
     questions: Question[],
-    id: number
+    id: number,
 ): Question | null {
-    return null;
+    const found = questions.find(
+        (question: Question): boolean => question.id === id,
+    );
+
+    if (!found) {
+        return null;
+    }
+
+    const copiedOptions: string[] = found.options.map(
+        (option: string): string => option,
+    );
+
+    const copiedQuestion: Question = {
+        id: found.id,
+        name: found.name,
+        type: found.type,
+        body: found.body,
+        expected: found.expected,
+        options: copiedOptions,
+        points: found.points,
+        published: found.published,
+    };
+
+    return copiedQuestion;
 }
 
 /**
@@ -35,7 +97,24 @@ export function findQuestion(
  * Hint: use filter
  */
 export function removeQuestion(questions: Question[], id: number): Question[] {
-    return [];
+    return questions
+        .filter((question: Question): boolean => question.id !== id)
+        .map((question: Question): Question => {
+            const copiedOptions: string[] = question.options.map(
+                (option: string): string => option,
+            );
+
+            return {
+                id: question.id,
+                name: question.name,
+                type: question.type,
+                body: question.body,
+                expected: question.expected,
+                options: copiedOptions,
+                points: question.points,
+                published: question.published,
+            };
+        });
 }
 
 /***
@@ -44,7 +123,7 @@ export function removeQuestion(questions: Question[], id: number): Question[] {
  * Do not modify the input array.
  */
 export function getNames(questions: Question[]): string[] {
-    return [];
+    return questions.map((question: Question): string => question.name);
 }
 
 /**
@@ -52,8 +131,16 @@ export function getNames(questions: Question[]): string[] {
  * Answers. Each Question gets its own Answer, copying over the `id` as the `questionId`,
  * making the `text` an empty string, and using false for both `submitted` and `correct`.
  */
+
 export function makeAnswers(questions: Question[]): Answer[] {
-    return [];
+    return questions.map((question: Question): Answer => {
+        return {
+            questionId: question.id,
+            text: "",
+            submitted: false,
+            correct: false,
+        };
+    });
 }
 
 /***
@@ -62,7 +149,22 @@ export function makeAnswers(questions: Question[]): Answer[] {
  * Hint: as usual, do not modify the input questions array
  */
 export function publishAll(questions: Question[]): Question[] {
-    return [];
+    return questions.map((question: Question): Question => {
+        const copiedOptions: string[] = question.options.map(
+            (option: string): string => option,
+        );
+
+        return {
+            id: question.id,
+            name: question.name,
+            type: question.type,
+            body: question.body,
+            expected: question.expected,
+            options: copiedOptions,
+            points: question.points,
+            published: true,
+        };
+    });
 }
 
 /***
@@ -71,28 +173,62 @@ export function publishAll(questions: Question[]): Question[] {
  * you defined in the `objects.ts` file.
  * Hint: as usual, do not modify the input questions array
  */
+
+import { makeBlankQuestion } from "./objects"; // Needed when re using the makeBlankQuestion from objects file (mental note)
+
 export function addNewQuestion(
     questions: Question[],
     id: number,
     name: string,
-    type: QuestionType
+    type: QuestionType,
 ): Question[] {
-    return [];
+    // Deep copy each question to avoid reference sharing
+    const copiedQuestions: Question[] = questions.map(
+        (question: Question): Question => {
+            return {
+                ...question,
+                options: [...question.options],
+            };
+        },
+    );
+
+    // Create a new blank question using the provided helper
+    const newBlankQuestion: Question = makeBlankQuestion(id, name, type);
+
+    // Return a new array with all copied questions + the new blank one
+    return [...copiedQuestions, newBlankQuestion];
 }
 
 /***
  * Consumes an array of Questions and produces a new array of Questions, where all
  * the Questions are the same EXCEPT for the one with the given `targetId`. That
  * Question should be the same EXCEPT that its name should now be `newName`.
- * Hint: as usual, do not modify the input questions array, 
+ * Hint: as usual, do not modify the input questions array,
  *       to make a new copy of a question with some changes, use the ... operator
  */
 export function renameQuestionById(
     questions: Question[],
     targetId: number,
-    newName: string
+    newName: string,
 ): Question[] {
-    return [];
+    return questions.map((question: Question): Question => {
+        const copiedOptions: string[] = question.options.map(
+            (option: string): string => option,
+        );
+
+        if (question.id === targetId) {
+            return {
+                ...question,
+                name: newName,
+                options: copiedOptions,
+            };
+        } else {
+            return {
+                ...question,
+                options: copiedOptions,
+            };
+        }
+    });
 }
 
 /**
@@ -104,14 +240,41 @@ export function renameQuestionById(
  *
  * Remember, if a function starts getting too complicated, think about how a helper function
  * can make it simpler! Break down complicated tasks into little pieces.
- * 
+ *
  * Hint: you need to use the ... operator for both the question and the options array
  */
 export function editOption(
     questions: Question[],
     targetId: number,
     targetOptionIndex: number,
-    newOption: string
+    newOption: string,
 ): Question[] {
-    return [];
+    return questions.map((question: Question): Question => {
+        const copiedOptions: string[] = question.options.map(
+            (option: string): string => option,
+        );
+
+        if (question.id !== targetId) {
+            return {
+                ...question,
+                options: copiedOptions,
+            };
+        }
+
+        let updatedOptions: string[];
+
+        if (targetOptionIndex === -1) {
+            updatedOptions = [...copiedOptions, newOption];
+        } else {
+            updatedOptions = copiedOptions.map(
+                (option: string, index: number): string =>
+                    index === targetOptionIndex ? newOption : option,
+            );
+        }
+
+        return {
+            ...question,
+            options: updatedOptions,
+        };
+    });
 }
