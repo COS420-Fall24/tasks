@@ -1,5 +1,16 @@
 import React from "react";
 import "./App.css";
+import { Button, Col, Container, Row } from "react-bootstrap";
+import { ChangeType } from "./components/ChangeType";
+import { RevealAnswer } from "./components/RevealAnswer";
+import { TwoDice } from "./components/TwoDice";
+import { Counter } from "./components/Counter";
+import { DoubleHalf } from "./bad-components/DoubleHalf";
+import { ColoredBox } from "./bad-components/ColoredBox";
+import { ChooseTeam } from "./bad-components/ChooseTeam";
+import { CheckAnswer } from "./form-components/CheckAnswer";
+import { EditMode } from "./form-components/EditMode";
+import { MultipleChoiceQuestion } from "./form-components/MultipleChoiceQuestion";
 
 function App(): React.JSX.Element {
     return (
@@ -7,12 +18,57 @@ function App(): React.JSX.Element {
             <header className="App-header">
                 UM COS420 with React Hooks and TypeScript
             </header>
+            <h1>Hello World</h1>
+            <img src="https://th.bing.com/th/id/OIP.CBFZpMOFqyCjyHOJxouwVAHaE8?rs=1&pid=ImgDetMain"alt="pic of some random cat" />
+            <ul>
+                <li>i am thing one</li>
+                <li>i am thing two</li>
+                <li>i am thing three</li>
+            </ul>
+
+            <Button onClick={ () => { console.log("Hello World!") } }>Log Hello World</Button>
+            <Container>
+            <Row>
+                <Col>rgb(200, 44, 44)</Col>
+                <Col>rgb(200, 44, 44)
+
+                </Col>
+            </Row>
+        </Container>
+
+
+
             <p>
-                Edit <code>src/App.tsx</code> and save. This page will
+                Edit <code>src/App.tsx</code> and save. ben miller  hello world This page will
                 automatically reload.
             </p>
+            <hr></hr>
+            <CheckAnswer expectedAnswer="42"></CheckAnswer>
+            <hr></hr>
+            <EditMode></EditMode>
+            <hr></hr>
+            <MultipleChoiceQuestion
+                options={["a", "b", "c"]}
+                expectedAnswer="b"
+            ></MultipleChoiceQuestion>
+            <hr></hr>
+            {/* <DoubleHalf></DoubleHalf> */}
+            <hr></hr>
+            <ChooseTeam></ChooseTeam>
+            <hr></hr>
+            <ColoredBox></ColoredBox>
+            <hr></hr>
+            <Counter></Counter>
+            <hr />
+            <RevealAnswer></RevealAnswer>
+            <hr />
+            <TwoDice></TwoDice>
+            <hr />
+            <ChangeType></ChangeType>
         </div>
     );
 }
 
+
 export default App;
+
