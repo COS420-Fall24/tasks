@@ -1,3 +1,4 @@
+import Form from "react-bootstrap/Form";
 import React, { useState } from "react";
 
 export function CheckAnswer({
@@ -5,9 +6,17 @@ export function CheckAnswer({
 }: {
     expectedAnswer: string;
 }): React.JSX.Element {
+    const [answer, setAnswer] = useState<string>("");
+
+    function updateAnswer(event: React.ChangeEvent<HTMLInputElement>) {
+        setAnswer(event.target.value);
+    }
+
     return (
         <div>
-            <h3>Check Answer</h3>
+            <Form.Label>Check Answer</Form.Label>
+            <Form.Control value={answer} onChange={updateAnswer} />
+            {answer === expectedAnswer ? "✔️" : "❌"}
         </div>
     );
 }
