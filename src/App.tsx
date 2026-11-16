@@ -22,10 +22,10 @@ function App(): React.JSX.Element {
             <hr></hr>
             <EditMode></EditMode>
             <hr></hr>
-            {/*<MultipleChoiceQuestion
+            <MultipleChoiceQuestion
                 options={["a", "b", "c"]}
                 expectedAnswer="b"
-            ></MultipleChoiceQuestion>*/}
+            ></MultipleChoiceQuestion>
             <hr></hr>
             {<DoubleHalf></DoubleHalf>}
             <hr></hr>
